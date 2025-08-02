@@ -1,25 +1,26 @@
+script_key="GMyqZfwglsTgGOMQwEcdfTFNjOvRZhQc";
 setfpscap(3)
+
 getgenv().gagConfig = {
-    SCRIPT_KEY = script_key,
-    -- Event:
+-- Event:
     CRAFT_EVENT = { "Anti Bee Egg" },
-    BUY_TRAVELING_MERCHANT = { "Bee Egg"},
-    BUY_EVENT_SHOP = { "Zen Egg", "Koi"},
-    MAX_EVENT_RESTOCK_SHECKLES = 1000000000,
+    BUY_TRAVELING_MERCHANT = { "Bee Egg", "Primal Egg"},
+    BUY_EVENT_SHOP = { "Zen Egg"},
+    MAX_EVENT_RESTOCK_SHECKLES = 10000000000,
+    PLACE_ALL_EVENT_STAFF = true,
     
     -- General:
     AUTO_UPDATE_RESTART = true,
     REDEEM_CODES = {},
-    EXTRA_PET_SLOTS = 1,
-    EXTRA_EGG_SLOTS = 2,
+    EXTRA_PET_SLOTS = 4,
+    EXTRA_EGG_SLOTS = 4,
     EXTRA_PET_EQUIP_SLOTS = 0,
     ADD_FRIEND = true,
     OPEN_ALL_SEED_PACK = true,
-    MUTATE_PET = { "Capybara" },
     FAST_LEVEL_PET = true,
 
-    MAX_PLANTS = 300,
-    DESTROY_UNTIL_MIN_PLANTS = 280,
+    MAX_PLANTS = 250,
+    DESTROY_UNTIL_MIN_PLANTS = 230,
     DELETE_PLANTS_AFTER_MAX = { "Strawberry", "Blueberry", "Corn", "Tomato", "Daffodil", "Apple", "Coconut" },
     
     BUY_EGGS = {"Mythical Egg", "Bug Egg", "Bee Egg", "Paradise Egg", "Uncommon Egg", ["Common Summer Egg"] = 20, ["Rare Summer Egg"] = 20},
@@ -33,25 +34,23 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},  -- Stop Autosell
     SKIP_HARVEST_MUTATIONS = {},  -- Stop Harvest
 
-    KEEP_PETS = { ["Koi"] = 8, "Kitsune", "Kappa", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Brontosaurus", "T-Rex", "Spinosaurus", "Ankylosaurus", "Dilophosaurus", "Capybara", "Seal", "Red Fox", "Tanchozuru"},
-    KEEP_PETS_WEIGHT = 7,
-    KEEP_PETS_AGE = 50,
+    KEEP_PETS = { ["Corrupted Kodama"] = 7, ["Kodama"] = 4, "Corrupted Kitsune", ["Starfish"] = 5, "Kitsune", ["Kappa"] = 1, "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Brontosaurus", "T-Rex", "Spinosaurus", "Ankylosaurus", "Dilophosaurus", ["Capybara"] = 2, [ "Seal"] = 1, "Red Fox", "Tanchozuru", ["Tanuki"] = 1, ["Ostrich"] = 1, ["Raiju"] = 2},
+    KEEP_PETS_WEIGHT = 6,
 
     -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = { "Koi", "Seal", "Starfish", "Tanchozuru", "Capybara"},
-    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish", "Capybara"},
-    REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },
+    EQUIP_PETS = { ["Capybara"] = 1, ["Starfish"] = 4, ["Kodama"] = 2},
+    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish"},
 
     BUY_GEAR_SHOP = { "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
     USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
 
     PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1386629644140417145/rXZ-L2AWqC2p-dzbGULNBLoKmQiJ7tvUrPIhsFT5DcysdOvid77952-1jVKi4hOiq0qs",
     SEED_WEBHOOK_URL = "", 
-    NOTIFY_PETS = { "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Red Fox", "Spinosaurus"},
+    NOTIFY_PETS = { "Corrupted Kitsune", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Red Fox", "Spinosaurus"},
     NOTIFY_PETS_WEIGHT = 10,
     DISCORD_ID = "",
     WEBHOOK_NOTE = "hi baby",
     SHOW_WEBHOOK_USERNAME = true,
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6cb882027ef5de19462b160764dcfb53.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
