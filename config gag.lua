@@ -61,7 +61,7 @@ getgenv().ConfigsKaitun = {
 				Minimum_Chi = 30
 			},
 			["Doing"] = {
-				Minimum_Money = 1000, -- minimum money to start play this event
+				Minimum_Money = 1000000, -- minimum money to start play this event
 				First_Upgrade_Tree = 1,
 				Maximum_Chi = 50,
 			}
@@ -214,3 +214,4 @@ getgenv().ConfigsKaitun = {
 }
 License = "wagsUAMmdVSU2y1p813GIRVt3l28503q"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
