@@ -7,8 +7,8 @@ getgenv().ConfigsKaitun = {
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 300,
-		["Destroy Untill"] = 280,
+		["Limit"] = 380,
+		["Destroy Untill"] = 350,
 
 		["Safe Tree"] = {
 			"Bone Blossom",
@@ -214,4 +214,5 @@ getgenv().ConfigsKaitun = {
 }
 License = "wagsUAMmdVSU2y1p813GIRVt3l28503q"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
