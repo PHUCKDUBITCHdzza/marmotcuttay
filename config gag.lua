@@ -148,6 +148,7 @@ getgenv().ConfigsKaitun = {
 		},
 		Locked_Pet_Age = 50, -- pet that age > 60 will lock
 		Locked = {
+			["Kodama"] = 4,
 			"French Fry Ferret",
 			"Axolotl",
 			"Koi",
@@ -211,3 +212,4 @@ getgenv().ConfigsKaitun = {
 }
 License = "wagsUAMmdVSU2y1p813GIRVt3l28503q"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
