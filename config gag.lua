@@ -22,7 +22,7 @@ getgenv().gagConfig = {
 
     MAX_PLANTS = 250,
     DESTROY_UNTIL_MIN_PLANTS = 230,
-    DELETE_PLANTS_AFTER_MAX = { "Carrot", "Daffodil", "Orange Tulip", "Cactus", "Dragon Fruit", "Mango", "Grape", "Mushroom", "Cacao", "Bamboo", "Coconut" },
+    DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Cauliflower" },
     
     BUY_EGGS = { "Mythical Egg", "Bug Egg", "Bee Egg", "Paradise Egg", "Uncommon Egg", ["Common Summer Egg"] = 20, ["Rare Summer Egg"] = 20},
     PLANT_EGGS = { "Gourmet Egg", "Rare Summer Egg", "Zen Egg", "Anti Bee Egg","Uncommon Egg", "Primal Egg", "Bug Egg", "Dinosaur Egg", "Paradise Egg", "Mythical Egg", "Common Summer Egg", "Oasis Egg", "Night Egg", "Bee Egg"},
@@ -39,7 +39,7 @@ getgenv().gagConfig = {
     KEEP_PETS_WEIGHT = 6,
 
     -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = { "Corrupted Kodama", ["Capybara"] = 1, ["Starfish"] = 6},
+    EQUIP_PETS = { ["Kodama"] = 2, ["Capybara"] = 1, ["Starfish"] = 4},
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish"},
 
     BUY_GEAR_SHOP = { "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
@@ -55,6 +55,7 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+
 
 
 
