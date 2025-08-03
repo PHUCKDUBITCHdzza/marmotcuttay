@@ -194,6 +194,7 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
+				"French Fry Ferret",
 				"Disco Bee",
 		         	"Corrupted Kitsune",
 				"Butterfly",
@@ -210,6 +211,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "wagsUAMmdVSU2y1p813GIRVt3l28503q"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
