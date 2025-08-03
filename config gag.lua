@@ -105,6 +105,8 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Uncommon Egg",
+			"Rare Summer Egg",
 			"Gourmet Egg",
 			"Zen Egg",
 			"Primal Egg",
@@ -118,6 +120,8 @@ getgenv().ConfigsKaitun = {
 			"Mythical Egg",
 		},
 		Buy = {
+			["Uncommon Egg"] = 20,
+			["Rare Summer Egg"] = 20,
 			"Bee Egg",
 			"Oasis Egg",
 			"Paradise Egg",
@@ -136,9 +140,9 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 4,
 			["Equip When Done"] = {
-				["Starfish"] = { 4, 100, 3 },
-				["Capybara"] = { 1, 100, 4 },
-				["Tanchozuru"] = { 2, 100, 5 },
+				["Starfish"] = { 4, 100, 4 },
+				["Capybara"] = { 1, 100, 5 },
+				["Tanchozuru"] = { 2, 100, 3 },
 				["Kodama"] = { 2, 100, 1 },
 				["Corrupted Kodama"] = { 2, 100, 2 },
 			},
@@ -211,6 +215,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "wagsUAMmdVSU2y1p813GIRVt3l28503q"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
