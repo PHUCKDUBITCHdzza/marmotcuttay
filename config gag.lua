@@ -20,8 +20,8 @@ getgenv().gagConfig = {
     OPEN_ALL_SEED_PACK = true,
     FAST_LEVEL_PET = true,
 
-    MAX_PLANTS = 400,
-    DESTROY_UNTIL_MIN_PLANTS = 380,
+    MAX_PLANTS = 350,
+    DESTROY_UNTIL_MIN_PLANTS = 320,
     DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Cauliflower" },
     
     BUY_EGGS = { "Mythical Egg", "Bug Egg", "Bee Egg", "Paradise Egg", "Uncommon Egg", ["Common Summer Egg"] = 20, ["Rare Summer Egg"] = 20},
@@ -55,6 +55,7 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+
 
 
 
