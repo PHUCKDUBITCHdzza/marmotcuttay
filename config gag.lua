@@ -11,7 +11,7 @@ getgenv().gagConfig = {
     PLACE_ALL_EVENT_STAFF = true,
     
     -- General:
-    AUTO_UPDATE_RESTART = true,
+    AUTO_UPDATE_RESTART = false,
     REDEEM_CODES = {},
     EXTRA_PET_SLOTS = 4,
     EXTRA_EGG_SLOTS = 4,
@@ -56,6 +56,7 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+
 
 
 
