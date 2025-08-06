@@ -13,8 +13,8 @@ getgenv().gagConfig = {
     -- General:
     AUTO_UPDATE_RESTART = false,
     REDEEM_CODES = {},
-    EXTRA_PET_SLOTS = 5,
-    EXTRA_EGG_SLOTS = 5,
+    EXTRA_PET_SLOTS = 4,
+    EXTRA_EGG_SLOTS = 4,
     OPEN_ALL_SEED_PACK = true,
     ADD_FRIEND = true,
     FAST_LEVEL_PET = true,
@@ -55,4 +55,5 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+
 
