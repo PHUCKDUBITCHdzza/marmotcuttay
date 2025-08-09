@@ -9,7 +9,7 @@ getgenv().gagConfig = {
     BUY_EVENT_SHOP = { "Zen Egg"},
     MAX_EVENT_RESTOCK_SHECKLES = 10000000000,
     PLACE_ALL_EVENT_STAFF = true,
-    CLAIM_FOOD_CONNOISSEUR_REWARD
+    CLAIM_FOOD_CONNOISSEUR_REWARD = { "Culinarian Chest", "Gorilla Chef", "Gourmet Egg", "Sunny-Side Chicken", "Pet Shard Aromatic" },
     
     -- General:
     AUTO_UPDATE_RESTART = false,
@@ -36,12 +36,12 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},  -- Stop Autosell
     SKIP_HARVEST_MUTATIONS = {},  -- Stop Harvest
 
-    KEEP_PETS = { "Lobster Thermidor", ["Gorilla Chef"] = 5, {"Sunny-Side Chicken"] = 6, ["Hotdog Daschund"] = 4, ["Bacon Pig"] = 4, ["Junkbot"] = 5, "French Fry Ferret", "Spaghetti Sloth", ["Mochi Mouse"] = 2, ["Kodama"] = 1, "Corrupted Kitsune", ["Starfish"] = 12, ["Capybara"] = 1, ["Tanchozuru"] = 1, ["Seal"] = 1, "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
+    KEEP_PETS = { "Lobster Thermidor", ["Gorilla Chef"] = 5, ["Sunny-Side Chicken"] = 6, ["Hotdog Daschund"] = 4, ["Bacon Pig"] = 4, ["Junkbot"] = 5, "French Fry Ferret", "Spaghetti Sloth", ["Mochi Mouse"] = 2, ["Kodama"] = 1, "Corrupted Kitsune", ["Starfish"] = 12, ["Capybara"] = 1, ["Tanchozuru"] = 1, ["Seal"] = 1, "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
     KEEP_PETS_WEIGHT = 5,
 
     -- EQUIP_PETS Priority (Left -> Right)
     EQUIP_PETS = { ["Gorilla Chef"] = 1, ["Sunny-Side Chicken"] = 1 }, ["Capybara"] = 1, ["Starfish"] = 7},
-    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish"}, {"Capybara"},
+    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish", "Capybara"},
 
     BUY_GEAR_SHOP = { "Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
     USE_SPRINKLER = { "Grandmaster Sprinkler", "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
@@ -56,6 +56,7 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+
 
 
 
