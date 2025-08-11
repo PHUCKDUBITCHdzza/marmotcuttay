@@ -150,7 +150,7 @@ getgenv().ConfigsKaitun = {
         ["Start Delete Pet At"] = 45,
         ["Upgrade Slot"] = {
             ["Pet"] = {
-                ["Starfish"] = { 4, 76, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
+                ["Starfish"] = { 4, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
             },
             ["Limit Upgrade"] = 5,-- max is 5 (more than or lower than 1 will do nothing)
             ["Equip When Done"] = {
@@ -162,7 +162,7 @@ getgenv().ConfigsKaitun = {
             },
         },
         Favorite_LockedPet = true,
-        Locked_Pet_Age = 60, -- pet that age > 60 will lock
+        Locked_Pet_Age = 76, -- pet that age > 60 will lock
         Locked = {
 			["Sushi Bear"] = 2,
 			"Lobster Thermidor",
@@ -223,6 +223,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "dY8f40dvdVToW40xyQj7gqt8faG4IoFO"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
