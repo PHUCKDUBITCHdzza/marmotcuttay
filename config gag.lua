@@ -154,8 +154,8 @@ getgenv().ConfigsKaitun = {
             },
             ["Limit Upgrade"] = 5,-- max is 5 (more than or lower than 1 will do nothing)
             ["Equip When Done"] = {
-                ["Gorilla Chef"] = { 4, 100, 1 },
-				["Sushi Bear"] = { 2, 100, 2 },
+                ["Gorilla Chef"] = { 5, 100, 1 },
+				["Sushi Bear"] = { 1, 100, 2 },
 				["Sunny-Side Chicken"] = { 2, 100, 3 },
                 ["Capybara"] = { 1, 100, 4 },
                 ["Starfish"] = { 8, 100, 5 },
@@ -223,6 +223,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "dY8f40dvdVToW40xyQj7gqt8faG4IoFO"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
