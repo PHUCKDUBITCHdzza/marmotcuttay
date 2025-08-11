@@ -166,16 +166,16 @@ getgenv().ConfigsKaitun = {
 			["Sushi Bear"] = 2,
 			"Lobster Thermidor",
             ["Gorilla Chef"] = 5,
-            ["Sunny-Side Chicken"] = 6,
-            ["Hotdog Daschund"] = 4,
-            ["Bacon Pig"] = 4,
-            ["Junkbot"] = 5,
+            ["Sunny-Side Chicken"] = 10,
+            ["Hotdog Daschund"] = 2,
+            ["Bacon Pig"] = 2,
+            ["Junkbot"] = 4,
             "French Fry Ferret",
             ["Spaghetti Sloth"] = 2,
             ["Mochi Mouse"] = 2,
             ["Kodama"] = 1,
             "Corrupted Kitsune",
-            ["Starfish"] = 12,
+            ["Starfish"] = 10,
             ["Capybara"] = 1,
             ["Tanchozuru"] = 1,
             ["Seal"] = 1,
@@ -222,6 +222,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "dY8f40dvdVToW40xyQj7gqt8faG4IoFO"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
