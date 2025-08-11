@@ -151,18 +151,19 @@ getgenv().ConfigsKaitun = {
             ["Pet"] = {
                 ["Starfish"] = { 8, 76, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
             },
-            ["Limit Upgrade"] = 4,             -- max is 5 (more than or lower than 1 will do nothing)
+            ["Limit Upgrade"] = 5,-- max is 5 (more than or lower than 1 will do nothing)
             ["Equip When Done"] = {
-                ["Gorilla Chef"] = { 2, 100, 1 },
+                ["Gorilla Chef"] = { 3, 100, 1 },
+				["Sushi Bear"] = { 2, 100, 2 },
                 ["Capybara"] = { 1, 100, 3 },
-                ["Sunny-Side Chicken"] = { 1, 100, 2 },
                 ["Starfish"] = { 8, 100, 4 },
             },
         },
         Favorite_LockedPet = true,
         Locked_Pet_Age = 60, -- pet that age > 60 will lock
         Locked = {
-            "Lobster Thermidor",
+			["Sushi Bear"] = 2,
+			"Lobster Thermidor",
             ["Gorilla Chef"] = 5,
             ["Sunny-Side Chicken"] = 6,
             ["Hotdog Daschund"] = 4,
@@ -220,3 +221,4 @@ getgenv().ConfigsKaitun = {
 }
 License = "dY8f40dvdVToW40xyQj7gqt8faG4IoFO"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
