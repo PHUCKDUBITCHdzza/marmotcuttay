@@ -76,6 +76,7 @@ getgenv().ConfigsKaitun = {
                 "Culinarian Chest",
                 "Gourmet Seed Pack",
                 "Sunny-Side Chicken",
+				"Cooking Cauldron",
                 -- u can add it more as u want, if it not in list.
             }
         },
@@ -221,5 +222,6 @@ getgenv().ConfigsKaitun = {
 }
 License = "dY8f40dvdVToW40xyQj7gqt8faG4IoFO"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
