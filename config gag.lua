@@ -165,7 +165,7 @@ getgenv().ConfigsKaitun = {
         Locked = {
 			["Sushi Bear"] = 2,
 			"Lobster Thermidor",
-            ["Gorilla Chef"] = 5,
+            ["Gorilla Chef"] = 10,
         	["Sunny-Side Chicken"] = 18
             ["Hotdog Daschund"] = 1,
             ["Bacon Pig"] = 1,
@@ -222,6 +222,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "dY8f40dvdVToW40xyQj7gqt8faG4IoFO"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
