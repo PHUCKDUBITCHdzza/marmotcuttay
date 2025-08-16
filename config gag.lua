@@ -40,7 +40,7 @@ getgenv().gagConfig = {
     KEEP_PETS_AGE = 90,
 
     -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = { ["Sunny-Side Chicken"] = 2, ["Spriggan"] = 2, ["Starfish"] = 8},
+    EQUIP_PETS = { ["Sunny-Side Chicken"] = 8, ["Spriggan"] = 2, ["Starfish"] = 8},
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish", "Capybara"},
 
@@ -57,4 +57,5 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+
 
