@@ -41,6 +41,7 @@ getgenv().gagConfig = {
 
     -- EQUIP_PETS Priority (Left -> Right)
     EQUIP_PETS = { ["Sunny-Side Chicken"] = 2, ["Spriggan"] = 2, ["Starfish"] = 8},
+    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish", "Capybara"},
 
     BUY_GEAR_SHOP = { "Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
@@ -56,3 +57,4 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+
