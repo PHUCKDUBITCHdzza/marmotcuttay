@@ -23,7 +23,7 @@ getgenv().ConfigsKaitun = {
 			"Moon Mango",
 			"Bone Blossom",
 			"Fossilight",
-      		        "Serenity",
+      		"Serenity",
 
 		}
 	},
@@ -73,9 +73,17 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Events = {
-		["Cook Event"] = {
-			Minimum_Money = 30_000_000, -- minimum money to start play this event
-			Rewards_Item = { "Culinarian Chest", "Gourmet Egg", "Gorilla Chef", "Sunny-Side Chicken", "Cooking Cauldron", "Pet Shard Aromatic", "Gourmet Seed Pack", "Bitter Melon Seed", "Pricklefruit Seed", "Butternut Squash Seed", "Spring Onion Seed", "Kitchen Crate", "Kitchen Flooring", "Kitchen Cart", "Smoothie Fountain" }
+		["Bean Event"] = {
+			Minimum_Money = 10_000_000, -- minimum money to start play this event
+		},
+		Shop = { -- delete -- to buy
+			"Sprout Seed Pack",
+			"Sprout Egg",
+			-- "Mandrake",
+			"Silver Fertilizer",
+			"Canary Melon",
+			"Amberheart",
+			"Spriggan",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -93,6 +101,7 @@ getgenv().ConfigsKaitun = {
 	Gear = {
 		Buy = { 
 			"Master Sprinkler",
+			"Grandmaster Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
@@ -104,6 +113,7 @@ getgenv().ConfigsKaitun = {
 		},
 		Lock = {
 			"Master Sprinkler",
+			"Grandmaster Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
@@ -117,6 +127,7 @@ getgenv().ConfigsKaitun = {
 		Place = {
 			"Gourmet Egg",
 			"Zen Egg",
+			"Sprout Egg",
 			"Primal Egg",
 			"Dinosaur Egg",
 			"Oasis Egg",
@@ -133,6 +144,7 @@ getgenv().ConfigsKaitun = {
 		Buy = {
 			"Bee Egg",
 			"Oasis Egg",
+			"Sprout Egg",
 			"Paradise Egg",
 			"Anti Bee Egg",
 			"Night Egg",
@@ -151,19 +163,21 @@ getgenv().ConfigsKaitun = {
             },
             ["Limit Upgrade"] = 5,-- max is 5 (more than or lower than 1 will do nothing)
             ["Equip When Done"] = {
-                ["Gorilla Chef"] = { 8, 100, 1 },
-				["Sunny-Side Chicken"] = { 1, 100, 2},
-                ["Capybara"] = { 1, 100 },
-                ["Starfish"] = { 8, 100 },
+				["Sunny-Side Chicken"] = { 1, 100, 1},
+				["Hotdog Daschund"] = { 4, 100, 2 },
+                ["Capybara"] = { 1, 100, 2 },
+                ["Starfish"] = { 8, 100, 3 },
             },
         },
         Favorite_LockedPet = true,
         Locked_Pet_Age = 76, -- pet that age > 60 will lock
         Locked = {
+			"Golden Goose",
+			["Golem"] = 2,
 			["Sushi Bear"] = 2,
 			"Lobster Thermidor",
-            ["Gorilla Chef"] = 10,
-        	["Sunny-Side Chicken"] = 18,
+            ["Gorilla Chef"] = 5,
+        	["Sunny-Side Chicken"] = 14,
             ["Hotdog Daschund"] = 1,
             ["Bacon Pig"] = 1,
             ["Junkbot"] = 4,
@@ -201,6 +215,7 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
+				"Golden Goose",
 				"French Fry Ferret",
                 "Lobster Thermidor",
 				"Disco Bee",
@@ -219,6 +234,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
