@@ -79,7 +79,7 @@ getgenv().ConfigsKaitun = {
 		Shop = { -- delete -- to buy
 			"Sprout Seed Pack",
 			"Sprout Egg",
-			-- "Mandrake",
+			--"Mandrake",
 			"Silver Fertilizer",
 			"Canary Melon",
 			"Amberheart",
@@ -164,9 +164,8 @@ getgenv().ConfigsKaitun = {
             ["Limit Upgrade"] = 5,-- max is 5 (more than or lower than 1 will do nothing)
             ["Equip When Done"] = {
 				["Sunny-Side Chicken"] = { 1, 100, 1},
-				["Hotdog Daschund"] = { 4, 100, 2 },
-                ["Capybara"] = { 1, 100, 2 },
-                ["Starfish"] = { 8, 100, 3 },
+				["Hotdog Daschund"] = { 1, 100, 2 },
+                ["Starfish"] = { 8, 100 },
             },
         },
         Favorite_LockedPet = true,
@@ -234,6 +233,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
