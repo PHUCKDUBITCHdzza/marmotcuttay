@@ -6,7 +6,7 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = true,
  
-	Collect_Cooldown = 60, -- cooldown to collect fruit
+	Collect_Cooldown = 90, -- cooldown to collect fruit
 	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation)
 
 	["Low Cpu"] = true,
@@ -235,5 +235,6 @@ getgenv().ConfigsKaitun = {
 }
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
