@@ -33,8 +33,8 @@ getgenv().gagConfig = {
     EQUIP_PETS = { ["Sunny-Side Chicken"] = 5, "Chicken Zombie", "Lemon Lion", ["Capybara"] = 1, ["Starfish"] = 8},
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish", "Capybara" },
 
-    BUY_GEAR_SHOP = { "Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
-    USE_SPRINKLER = { "Grandmaster Sprinkler", "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
+    BUY_GEAR_SHOP = { "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
+    USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
 
     PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1386629644140417145/rXZ-L2AWqC2p-dzbGULNBLoKmQiJ7tvUrPIhsFT5DcysdOvid77952-1jVKi4hOiq0qs",
     SEED_WEBHOOK_URL = "", 
@@ -46,6 +46,7 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+
 
 
 
