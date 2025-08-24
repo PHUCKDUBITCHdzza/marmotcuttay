@@ -31,7 +31,7 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},
     SKIP_HARVEST_MUTATIONS = {},
 
-    KEEP_PETS = { "Griffin", "Lemon Lion", "Apple Gazelle", "Peach Wasp", "Chicken Zombie", "Green Bean", ["Golem"] = 2, "Golden Goose", ["Spriggan"] = 2, "Lobster Thermidor", ["Sunny-Side Chicken"] = 18, ["Hotdog Daschund"] = 1, ["Junkbot"] = 2, "French Fry Ferret", ["Spaghetti Sloth"] = 1, ["Mochi Mouse"] = 1, ["Kodama"] = 1, "Corrupted Kitsune", ["Starfish"] = 8, ["Capybara"] = 1, ["Tanchozuru"] = 1, ["Seal"] = 1, "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
+    KEEP_PETS = { "Griffin", "Lemon Lion", "Apple Gazelle", "Peach Wasp", "Chicken Zombie", ["Gorilla Chef"] = 8, "Green Bean", ["Golem"] = 2, "Golden Goose", ["Spriggan"] = 2, "Lobster Thermidor", ["Sunny-Side Chicken"] = 18, ["Hotdog Daschund"] = 1, ["Junkbot"] = 2, "French Fry Ferret", ["Spaghetti Sloth"] = 1, ["Mochi Mouse"] = 1, ["Kodama"] = 1, "Corrupted Kitsune", ["Starfish"] = 8, ["Capybara"] = 1, ["Tanchozuru"] = 1, ["Seal"] = 1, "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
     KEEP_PETS_WEIGHT = 5,
 
     -- EQUIP_PETS Priority (Left -> Right)
@@ -51,6 +51,7 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+
 
 
 
