@@ -14,11 +14,10 @@ getgenv().ConfigsKaitun = {
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 200,
-		["Destroy Untill"] = 150,
+		["Limit"] = 400,
+		["Destroy Untill"] = 350,
 
 		["Safe Tree"] = {
-			"Tranquil Bloom",
             "Moon Blossom",
             "Bone Blossom",
             "Moon Melon",
@@ -28,31 +27,49 @@ getgenv().ConfigsKaitun = {
             "Elephant Ears",
             "Fossilight",
             "Princess Thorn",
+			"Pineapple",
+			"Spike Mango",
+			"Starfruit",
+			"Horned Dinoshroom",
+			"Celestiberry",
+			"Mango",
+			"Watermelon",
+			"Grape",
+			"Mapple Apple",
+			"Moon Blossom",
+			"Sugar Apple",
 			"Beanstalk",
+			"Cacao",
+			"Apple",
+			"Conocut",
+			"Dragon Fruit",
+			"Grand Tomato",
+			"Pricklefruit",
+			"Mandrake",
+			"Mangosteen",
+			"Princess Thorn",
+			"Ember Lily",
+			"Burning Bud",
+			"Pepper",
+			"Mushroom",
+			-- for the event
+            ["Blueberry"] = 15,
+            ["Strawberry"] = 15,
+            ["Apple"] = 15,
+            ["Coconut"] = 15,
+            ["Dragon Fruit"] = 15,
+            ["Mango"] = 15,
+            ["Tomato"] = 20,
+            ["Cactus"] = 15,
+            ["Beanstalk"] = 40,
 		}
 	},
 
 	Seed = {
 		Buy = {
-			Mode = "Custom", -- Custom , Auto
-			Custom = {
-				"Tomato",
-				"Strawberry",
-				"Bell Pepper",
-				"Blood Banana",
-				"Onion",
-				"Pear",
-				"Grape",
-				"Mushroom",
-				"Pepper",
-				"Cacao",
-				"Beanstalk",
-				"Ember Lily",
-				"Sugar Apple",
-				"Burning Bud",
-				"Giant Pinecone",
-				"Elder Strawberry",
-				"Romanesco",
+			Mode = "Auto", -- Custom , Auto
+			Custom = { -- any fruit u need to place
+				"Carrot",
 			}
 		},
 		Place = {
@@ -61,20 +78,22 @@ getgenv().ConfigsKaitun = {
 				"Carrot"
 			},
 			Lock = {
+				"Maple Apple",
 				"Sunflower",
 				"Dragon Pepper",
 				"Elephant Ears",
 				"Moon Melon",
+				"Easter Egg",
 				"Moon Mango",
+				"Bone Blossom",
 				"Fossilight",
-				"Beanstalk",
 			}
 		}
 	},
 
 	["Seed Pack"] = {
 		Locked = {
-			    "Sprout Seed Pack",
+"Sprout Seed Pack",
 		}
 	},
 
@@ -246,6 +265,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "hLv5vGDrHC1cR2eyIaPkonhV0CmU0L12"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
