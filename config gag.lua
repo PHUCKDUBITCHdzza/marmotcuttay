@@ -52,9 +52,8 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a2234a9cfbe480dfed9eaf6c00a012ca.lua"))()
-wait(15)
+repeat wait(15) until getgenv().gagConfig ~= nil
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PHUCKDUBITCHdzza/config/refs/heads/main/chest.lua"))()
-end
 
 
 
