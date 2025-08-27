@@ -22,7 +22,7 @@ getgenv().gagConfig = {
     DESTROY_UNTIL_MIN_PLANTS = 240,
     DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Cauliflower", "Apple", "Coconut" },
     
-    BUY_EGGS = { "Legendary Egg", "Mythical Egg", "Bug Egg", "Bee Egg", "Paradise Egg", ["Common Summer Egg"] = 20, ["Rare Summer Egg"] = 20, ["Uncommon Egg"] = 99, ["Rare Egg"] = 99},
+    BUY_EGGS = { ["Legendary Egg"] = 99, "Mythical Egg", "Bug Egg", "Bee Egg", "Paradise Egg", ["Common Summer Egg"] = 99, ["Rare Summer Egg"] = 99, ["Uncommon Egg"] = 99, ["Rare Egg"] = 99},
     PLANT_EGGS = { "Legendary Egg", "Gourmet Egg", "Zen Egg", "Anti Bee Egg", "Primal Egg", "Bug Egg", "Paradise Egg", "Mythical Egg", "Common Summer Egg", "Rare Summer Egg", "Rare Egg" },
     
     -- BUY_SEED_SHOP Priority (Left -> Right)
@@ -53,6 +53,7 @@ getgenv().gagConfig = {
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a2234a9cfbe480dfed9eaf6c00a012ca.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PHUCKDUBITCHdzza/config/refs/heads/main/chest.lua"))()
+
 
 
 
