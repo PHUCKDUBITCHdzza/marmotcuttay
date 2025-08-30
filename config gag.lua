@@ -16,7 +16,7 @@ getgenv().gagConfig = {
     EXTRA_EGG_SLOTS = 5,
     ADD_FRIEND = true,
     OPEN_ALL_SEED_PACK = false,
-    PLACE_COSMETIC = { "Cooking Kit", "Cooking Cauldron" },
+    PLACE_COSMETIC = { "Fairy Targeter", "Cooking Kit", "Cooking Cauldron" },
 
     MAX_PLANTS = 250,
     DESTROY_UNTIL_MIN_PLANTS = 240,
@@ -53,6 +53,7 @@ getgenv().gagConfig = {
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a2234a9cfbe480dfed9eaf6c00a012ca.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PHUCKDUBITCHdzza/config/refs/heads/main/chest.lua"))()
+
 
 
 
