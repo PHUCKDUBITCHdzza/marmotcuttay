@@ -299,7 +299,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "hLv5vGDrHC1cR2eyIaPkonhV0CmU0L12"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
--- Auto interact Fairy trong workspace["1"] -> workspace["10"]
+wait(3)
 while true do
     for i = 1, 10 do
         local fairy = workspace:FindFirstChild(tostring(i))
@@ -311,6 +311,7 @@ while true do
             end
         end
     end
-    wait(30) -- lặp lại sau 60 giây
+    wait(20) -- lặp lại sau 60 giây
 end
+
 
