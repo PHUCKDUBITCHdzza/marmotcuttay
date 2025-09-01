@@ -121,7 +121,7 @@ getgenv().ConfigsKaitun = {
 					"Fairy Event Duration",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 10, -- max 10
+					["Glimmer Multiplier"] = 9, -- max 10
 					["Loose Fairy Spawn Amount"] = 4, -- max 4
 					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
@@ -314,6 +314,7 @@ while true do
     end
     wait(20) -- lặp lại sau 60 giây
 end
+
 
 
 
