@@ -108,6 +108,7 @@ getgenv().ConfigsKaitun = {
 				"Enchanted Egg",
 				"Fairy Targeter",
 				"FairyPoints",
+				"Pet Shard Glimmering",
 				--"Enchanted Seed Pack",
 				--"Enchanted Crate",
 			},
@@ -313,6 +314,7 @@ while true do
     end
     wait(20) -- lặp lại sau 60 giây
 end
+
 
 
 
