@@ -217,7 +217,7 @@ getgenv().ConfigsKaitun = {
 				 ["Squirrel"] = { 1, 100, 2 },
 				 ["Grey Mouse"] = { 2, 100, 3 },-- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
+			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
 				["Glimmering Sprite"] = { 3, 100, 1 },
 				["Sunny-Side Chicken"] = { 5, 100, 2 },
@@ -314,6 +314,7 @@ while true do
     end
     wait(20) -- lặp lại sau 60 giây
 end
+
 
 
 
