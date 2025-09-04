@@ -213,43 +213,43 @@ getgenv().ConfigsKaitun = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				 ["Brown Mouse"] = { 2, 100, 1 },
-				 ["Squirrel"] = { 1, 100, 2 },
-				 ["Grey Mouse"] = { 2, 100, 3 },-- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
+				["Sunny-Side Chicken"] = { 5, 100, true },
+				["Rooster"] = { 5, 100, true },
+				 ["Brown Mouse"] = { 2, 100, true },
+				 ["Squirrel"] = { 1, 100, true },
+				 ["Grey Mouse"] = { 2, 100, true },-- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
 			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 3, 100, 1 },
-				["Sunny-Side Chicken"] = { 5, 100, 2 },
-				["Rooster"] = { 5, 100, 3 },
+				["Imp"] = { 8, 100, 1 }
+				["Glimmering Sprite"] = { 3, 100, 2 },
+				["Sunny-Side Chicken"] = { 5, 100, 3 },
+				["Rooster"] = { 5, 100, 4 },
 			},
 		},
 		Unfavorite_AllPet = false,
 		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
-			["Polar Bear"] = 2,
 			"Cockatrice",
-			["Glimmering Sprite"] = 8,
-			["Imp"] = 1,
+			["Glimmering Sprite"] = 3,
+			["Imp"] = 15,
 			"Griffin",
 			["Brown Mouse"] = 2,
 			["Squirrel"] = 1,
 			["Grey Mouse"] = 2,
 			["Rooster"] = 4,
 			"Lemon Lion",
-			"Apple Gazelle",
 			"Peach Wasp",
 			"Chicken Zombie",
 			["Gorilla Chef"] = 8,
 			"Green Bean",
 			"Golden Goose",
-			["Spriggan"] = 2,
+			["Spriggan"] = 1, 
 			"Lobster Thermidor",
-			["Sunny-Side Chicken"] = 10,
-			["Junkbot"] = 2,
+			["Sunny-Side Chicken"] = 8,
 			"French Fry Ferret",
-			["Kodama"] = 1,
+			["Kodama"] = 1
 			"Corrupted Kitsune",
 			["Starfish"] = 10,
 			["Capybara"] = 1,
@@ -314,6 +314,7 @@ while true do
     end
     wait(20) -- lặp lại sau 60 giây
 end
+
 
 
 
