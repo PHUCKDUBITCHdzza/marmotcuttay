@@ -221,9 +221,9 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 3, 100, 2 },
-				["Sunny-Side Chicken"] = { 5, 100, 3 },
-				["Rooster"] = { 5, 100, 4 },
+				["Glimmering Sprite"] = { 4, 100, 1 },
+				["Sunny-Side Chicken"] = { 4, 100, 2 },
+				["Rooster"] = { 5, 100, 3 },
 			},
 		},
 		Unfavorite_AllPet = false,
@@ -231,8 +231,8 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Cockatrice",
-			["Glimmering Sprite"] = 3,
-			["Imp"] = 15,
+			["Glimmering Sprite"] = 8,
+			["Imp"] = 8,
 			"Griffin",
 			["Brown Mouse"] = 2,
 			["Squirrel"] = 1,
@@ -313,6 +313,7 @@ while true do
     end
     wait(20) -- lặp lại sau 60 giây
 end
+
 
 
 
