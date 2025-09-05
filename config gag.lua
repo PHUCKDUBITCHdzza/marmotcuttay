@@ -221,8 +221,8 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 4, 100, 1 },
-				["Sunny-Side Chicken"] = { 4, 100, 2 },
+				["Glimmering Sprite"] = { 6, 100, 1 },
+				["Sunny-Side Chicken"] = { 2, 100, 2 },
 				["Rooster"] = { 5, 100, 3 },
 			},
 		},
@@ -313,6 +313,7 @@ while true do
     end
     wait(20) -- lặp lại sau 60 giây
 end
+
 
 
 
