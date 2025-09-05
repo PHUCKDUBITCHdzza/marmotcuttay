@@ -215,8 +215,8 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 3, 100, 1 },
-                		["Sunny-Side Chicken"] = { 5, 100, 2 },
+				["Glimmering Sprite"] = { 4, 100, 1 },
+                		["Sunny-Side Chicken"] = { 4, 100, 2 },
                 		["Starfish"] = { 5, 100, 3 },
                 		["Brown Mouse"] = { 3, 100, 4 },
                 		["Grey Mouse"] = { 3, 100, 5 },
@@ -296,6 +296,21 @@ getgenv().ConfigsKaitun = {
 }
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+wait(3)
+while true do
+    for i = 1, 10 do
+        local fairy = workspace:FindFirstChild(tostring(i))
+        if fairy then
+            local prompt = fairy:FindFirstChildWhichIsA('ProximityPrompt', true)
+            if prompt then
+                fireproximityprompt(prompt)
+                print('Đã tương tác với Fairy:', fairy.Name)
+            end
+        end
+    end
+    wait(30) -- lặp lại sau 60 giây
+end
+
 
 
 
