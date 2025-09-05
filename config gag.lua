@@ -296,7 +296,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
-wait(3)
+wait(2)
 while true do
     for i = 1, 10 do
         local fairy = workspace:FindFirstChild(tostring(i))
@@ -310,6 +310,7 @@ while true do
     end
     wait(30) -- lặp lại sau 60 giây
 end
+
 
 
 
