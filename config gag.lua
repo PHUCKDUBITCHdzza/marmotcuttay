@@ -1,4 +1,4 @@
-script_key="PaNXzVUDIqqFAcrbQmCdIxkqCTkOiNon";
+script_key="SPrBpusRNXXLoimtzfdhTBvqFBOUhfDt";
 setfpscap(2)
 
 getgenv().gagConfig = {
@@ -54,6 +54,7 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6cb882027ef5de19462b160764dcfb53.lua"))()
+
 
 
 
