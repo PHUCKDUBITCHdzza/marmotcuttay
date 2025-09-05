@@ -213,11 +213,10 @@ getgenv().ConfigsKaitun = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Sunny-Side Chicken"] = { 5, 100, true },
-				["Rooster"] = { 5, 100, true },
-				 ["Brown Mouse"] = { 2, 100, true },
-				 ["Squirrel"] = { 1, 100, true },
-				 ["Grey Mouse"] = { 2, 100, true },-- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
+				["Rooster"] = { 5, 100, 3, true },
+				 ["Brown Mouse"] = { 2, 100, 1, true },
+				 ["Squirrel"] = { 1, 100, 4, true },
+				 ["Grey Mouse"] = { 2, 100, 2, true },-- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
 			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
@@ -232,7 +231,7 @@ getgenv().ConfigsKaitun = {
 		Locked = {
 			"Cockatrice",
 			["Glimmering Sprite"] = 8,
-			["Imp"] = 8,
+			["Imp"] = 3,
 			"Griffin",
 			["Brown Mouse"] = 2,
 			["Squirrel"] = 1,
@@ -299,5 +298,6 @@ getgenv().ConfigsKaitun = {
 }
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
