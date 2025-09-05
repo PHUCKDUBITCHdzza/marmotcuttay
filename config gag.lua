@@ -54,6 +54,21 @@ getgenv().gagConfig = {
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6cb882027ef5de19462b160764dcfb53.lua"))()
+wait(3)
+while true do
+    for i = 1, 10 do
+        local fairy = workspace:FindFirstChild(tostring(i))
+        if fairy then
+            local prompt = fairy:FindFirstChildWhichIsA('ProximityPrompt', true)
+            if prompt then
+                fireproximityprompt(prompt)
+                print('Đã tương tác với Fairy:', fairy.Name)
+            end
+        end
+    end
+    wait(20) -- lặp lại sau 60 giây
+end
+
 
 
 
