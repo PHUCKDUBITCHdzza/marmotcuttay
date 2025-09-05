@@ -97,7 +97,7 @@ getgenv().ConfigsKaitun = {
 
 	["Seed Pack"] = {
 		Locked = {
-
+			"Enchanted Seed Pack",
 		}
 	},
 
@@ -313,6 +313,7 @@ while true do
     end
     wait(20) -- lặp lại sau 60 giây
 end
+
 
 
 
