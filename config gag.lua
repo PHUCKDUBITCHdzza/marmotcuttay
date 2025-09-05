@@ -249,7 +249,7 @@ getgenv().ConfigsKaitun = {
 			"Lobster Thermidor",
 			["Sunny-Side Chicken"] = 8,
 			"French Fry Ferret",
-			["Kodama"] = 1
+			["Kodama"] = 1,
 			"Corrupted Kitsune",
 			["Starfish"] = 10,
 			["Capybara"] = 1,
@@ -314,6 +314,7 @@ while true do
     end
     wait(20) -- lặp lại sau 60 giây
 end
+
 
 
 
