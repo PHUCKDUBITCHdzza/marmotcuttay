@@ -107,6 +107,7 @@ getgenv().ConfigsKaitun = {
 			Rewards_Item = {
 				"Enchanted Egg",
 				"FairyPoints",
+				"Pet Shard Glimmering",
 				"Enchanted Seed Pack",
 				"Fairy Targeter",
 			},
@@ -310,6 +311,7 @@ while true do
     end
     wait(30) -- lặp lại sau 60 giây
 end
+
 
 
 
