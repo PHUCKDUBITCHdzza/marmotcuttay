@@ -1,14 +1,14 @@
 getgenv().ConfigsKaitun = {
-	Beta_Fix_Data_Sync = false,
+	Beta_Fix_Data_Sync = true,
 
 	NoDeletePlayer = false,
 
 	["Block Pet Gift"] = true,
 
-	Collect_Cooldown = 90, -- cooldown to collect fruit
+	Collect_Cooldown = 120, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
+	["Auto Rejoin"] = true,
 
 	["Rejoin When Update"] = false,
 
@@ -24,8 +24,8 @@ getgenv().ConfigsKaitun = {
 	},
 
 	["Limit Tree"] = {
-		["Limit"] = 330,
-		["Destroy Until"] = 330,
+		["Limit"] = 250,
+		["Destroy Until"] = 250,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -106,11 +106,9 @@ getgenv().ConfigsKaitun = {
 			Minimum_Money = 10_000_000, -- minimum money to start play this event
 			Rewards_Item = {
 				"Enchanted Egg",
-				"Fairy Targeter",
 				"FairyPoints",
-				"Pet Shard Glimmering",
 				"Enchanted Seed Pack",
-				--"Enchanted Crate",
+				"Fairy Targeter",
 			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
@@ -121,14 +119,14 @@ getgenv().ConfigsKaitun = {
 					"Fairy Event Duration",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 8, -- max 10
+					["Glimmer Multiplier"] = 10, -- max 10
 					["Loose Fairy Spawn Amount"] = 4, -- max 4
 					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
 				}
 			}
 		},
-		MaxMoney_Restocks = 100_000_000_000,
+		MaxMoney_Restocks = 50_000_000_000_000,
 		Shop = { -- un comment to buy
 			"Sprout Seed Pack",
 			"Sprout Egg",
@@ -138,8 +136,9 @@ getgenv().ConfigsKaitun = {
 			-- "Amberheart",
 			-- ["Spriggan"] = 8,
 			-- Friend Shop
+			"Sprout Egg",
 			"Skyroot Chest",
-			--"Pet Shard GiantBean",
+			"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -168,7 +167,6 @@ getgenv().ConfigsKaitun = {
 		},
 		Lock = {
 			"Master Sprinkler",
-			
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
@@ -178,19 +176,19 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Gourmet Egg",
 			"Enchanted Egg",
 			"Sprout Egg",
-			"Legendary Egg",
-			"Gourmet Egg",
 			"Zen Egg",
-			"Anti Bee Egg",
 			"Primal Egg",
+			"Dinosaur Egg",
+			"Oasis Egg",
+			"Anti Bee Egg",
+			"Night Egg",
 			"Bug Egg",
 			"Paradise Egg",
-			"Mythical Egg",
-			"Common Summer Egg",
 			"Rare Summer Egg",
-			"Rare Egg",
+			"Legendary Egg",
 		},
 		Buy = {
 			"Bee Egg",
@@ -213,16 +211,16 @@ getgenv().ConfigsKaitun = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Rooster"] = { 5, 100, 3, true },
-				 ["Brown Mouse"] = { 2, 100, 1, true },
-				 ["Squirrel"] = { 1, 100, 4, true },
-				 ["Grey Mouse"] = { 2, 100, 2, true },-- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
+				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
+			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 6, 100, 1 },
-				["Sunny-Side Chicken"] = { 4, 100, 2 },
-				["Rooster"] = { 5, 100, 3 },
+				["Glimmering Sprite"] = { 3, 100, 1 },
+                		["Sunny-Side Chicken"] = { 5, 100, 2 },
+                		["Starfish"] = { 5, 100, 3 },
+                		["Brown Mouse"] = { 3, 100, 4 },
+                		["Grey Mouse"] = { 3, 100, 5 },
+                		["Rooster"] = { 4, 100, 6 },
 			},
 		},
 		Unfavorite_AllPet = false,
@@ -298,6 +296,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
 
 
 
