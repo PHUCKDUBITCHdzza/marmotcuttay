@@ -7,7 +7,7 @@ getgenv().ConfigsKaitun = {
 
 	Collect_Cooldown = 90, -- cooldown to collect fruit
 
-	["Low Cpu"] = true,
+	["Low Cpu"] = false,
 	["Auto Rejoin"] = false,
 
 	["Rejoin When Update"] = false,
@@ -313,6 +313,7 @@ while true do
     end
     wait(20) -- lặp lại sau 60 giây
 end
+
 
 
 
