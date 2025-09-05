@@ -1,75 +1,301 @@
-script_key="SPrBpusRNXXLoimtzfdhTBvqFBOUhfDt";
-setfpscap(2)
+getgenv().ConfigsKaitun = {
+	Beta_Fix_Data_Sync = true,
 
-getgenv().gagConfig = {
-    -- Event:
-    CRAFT_EVENT = { "Anti Bee Egg", "Skyroot Chest", "Sprout Egg" },
-    BUY_TRAVELING_MERCHANT = { "Bee Egg", "Primal Egg", "Paradise Egg", "Rare Summer Egg", "Common Summer Egg" },
-    CLAIM_FAIRY_REWARD = { "Enchanted Egg", "Fairy Targeter", "FairyPoints", "Pet Shard Glimmering" },
-    CLAIM_FOOD_CONNOISSEUR_REWARD = {"Culinarian Chest", "Gourmet Egg", "Gorilla Chef"},
-    MAX_EVENT_RESTOCK_SHECKLES = 20_000_000_000_000,  -- Restock stop at..
-    BUY_EVENT_SHOP = { "Sprout Egg", "Skyroot Chest", "Sprout Seed Pack" },
-    PLANT_EVENT_TREES = true,
-    
-    -- General:
-    AUTO_UPDATE_RESTART = false,
-    REDEEM_CODES = {},
-    EXTRA_PET_SLOTS = 5,
-    EXTRA_EGG_SLOTS = 5,
-    ADD_FRIEND = true,
-    OPEN_ALL_SEED_PACK = true,
-    PLACE_COSMETIC = { "Cooking Kit", "Cooking Cauldron" },
+	NoDeletePlayer = false,
 
-    MAX_PLANTS = 330,
-    DESTROY_UNTIL_MIN_PLANTS = 330,
-    DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Cauliflower", "Apple", "Coconut" },
+	["Block Pet Gift"] = true,
 
-    BUY_EGGS = { ["Legendary Egg"] = 99, "Mythical Egg", "Bug Egg", "Bee Egg", "Paradise Egg", ["Common Summer Egg"] = 99, ["Rare Summer Egg"] = 99, ["Uncommon Egg"] = 99, ["Rare Egg"] = 99},
-    PLANT_EGGS = { "Enchanted Egg", "Sprout Egg", "Legendary Egg", "Gourmet Egg", "Zen Egg", "Anti Bee Egg", "Primal Egg", "Bug Egg", "Paradise Egg", "Mythical Egg", "Common Summer Egg", "Rare Summer Egg", "Rare Egg" },
-    
-    -- BUY_SEED_SHOP Priority (Left -> Right)
-    BUY_SEED_SHOP = { "Romanesco", "Giant Pinecone", "Burning Bud", "Sugar Apple", "Ember Lily", "Beanstalk", "Cacao", "Pepper", "Mushroom", "Grape", "Mango", "Dragon Fruit", "Cactus", "Coconut", "Bamboo", "Apple", "Pumpkin", "Watermelon", "Daffodil", "Tomato", "Orange Tulip", "Blueberry", "Strawberry", "Carrot" },
-    KEEP_SEEDS = { "Grand Tomato", "King Cabbage", "Bone Blossom" },
-    
-    FAVOURITE_FRUIT_MUTATIONS = {},
-    SKIP_HARVEST_MUTATIONS = {},
+	Collect_Cooldown = 90, -- cooldown to collect fruit
 
-    KEEP_PETS = { ["Polar Bear"] = 1, "Cockatrice", ["Glimmering Sprite"] = 8, ["Imp"] = 1, "Griffin", ["Brown Mouse"] = 2, ["Squirrel"] = 1, ["Grey Mouse"] = 2,  ["Rooster"] = 4, "Lemon Lion", "Apple Gazelle", "Peach Wasp", "Chicken Zombie", ["Gorilla Chef"] = 8, "Green Bean", "Golden Goose", ["Spriggan"] = 2, "Lobster Thermidor", ["Sunny-Side Chicken"] = 10, ["Junkbot"] = 2, "French Fry Ferret", ["Kodama"] = 1, "Corrupted Kitsune", ["Starfish"] = 10, ["Capybara"] = 1, ["Seal"] = 1, "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
-    KEEP_PETS_WEIGHT = 5,
+	["Low Cpu"] = true,
+	["Auto Rejoin"] = false,
 
-    -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = { ["Glimmering Sprite"] = 2, ["Sunny-Side Chicken"] = 5, ["Brown Mouse"] = 2, ["Squirrel"] = 1, ["Grey Mouse"] = 2,  ["Rooster"] = 4 },
-    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish", "Capybara", "Brown Mouse", "Grey Mouse", "Rooster" },
+	["Rejoin When Update"] = false,
 
-    BUY_GEAR_SHOP = { "Fairy Targeter", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
-    USE_SPRINKLER = { "Fairy Targeter", "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
+	["Auto Trade Pet"] = { -- not done yet bro dont use
+		["Enabled"] = false, 
+		["Target"] =  { -- multi users
+			"username1",
+			"username2",
+		},
+		["Pet To Send"] = {
+			
+		}
+	},
 
-    PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1386629644140417145/rXZ-L2AWqC2p-dzbGULNBLoKmQiJ7tvUrPIhsFT5DcysdOvid77952-1jVKi4hOiq0qs",
-    SEED_WEBHOOK_URL = "", 
-    NOTIFY_PETS = { "Cockatrice", "Griffin", "Golden Goose", "Lobster Thermidor", "French Fry Ferret", "Corrupted Kitsune", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Red Fox", "Spinosaurus"},
-    NOTIFY_PETS_WEIGHT = 5,
-    DISCORD_ID = "",
-    WEBHOOK_NOTE = "hi baby",
-    SHOW_WEBHOOK_USERNAME = true,
+	["Limit Tree"] = {
+		["Limit"] = 330,
+		["Destroy Until"] = 330,
+
+		["Safe Tree"] = {
+			"Moon Blossom",
+			"Bone Blossom",
+			"Moon Melon",
+			"Maple Apple",
+			"Moon Mango",
+			"Dragon Pepper",
+			"Elephant Ears",
+			"Fossilight",
+			"Princess Thorn",
+			-- for the event
+			["Bamboo"] = 10,
+			["Coconut"] = 5,
+			["Mushroom"] = 5,
+			["Glowthorn"] = 5,
+			["Tomato"] = 5,
+			["Pumpkin"] = 5,
+			["Pepper"] = 5,
+			["Cacao"] = 5,
+			["Apple"] = 5,
+			["Romanesco"] = 10,
+			["Elder Strawberry"] = 10,
+			["Burning Bud"] = 10,
+			["Giant Pinecone"] = 5,
+			["Corn"] = 5,
+			["Sugar Apple"] = 5,
+			["Ember Lily"] = 5,
+			["Dragon Fruit"] = 5,
+			["Sunbulb"] = 5,
+			["Orange Tulip"] = 10,
+			["Blueberry"] = 5,
+			["Watermelon"] = 5,
+			["Mango"] = 5,
+			["Cactus"] = 5,
+			["Strawberry"] = 5,
+			["Beanstalk"] = 10,
+			["Lightshoot"] = 5,
+			["Grape"] = 5,
+			["Daffodil"] = 5,
+		}
+	},
+
+	Seed = {
+		Buy = {
+			Mode = "Auto", -- Custom , Auto
+			Custom = { -- any fruit u need to place
+				"Carrot",
+			}
+		},
+		Place = {
+			Mode = "Lock", -- Select , Lock
+			Select = {
+				"Carrot"
+			},
+			Lock = {
+				"Maple Apple",
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Moon Melon",
+				"Easter Egg",
+				"Moon Mango",
+				"Bone Blossom",
+				"Fossilight",
+			}
+		}
+	},
+
+	["Seed Pack"] = {
+		Locked = {
+            "Enchanted Seed Pack",
+		}
+	},
+
+	Events = {
+		["Fairy Event"] = {
+			Minimum_Money = 10_000_000, -- minimum money to start play this event
+			Rewards_Item = {
+				"Enchanted Egg",
+				"Fairy Targeter",
+				"FairyPoints",
+				"Pet Shard Glimmering",
+				"Enchanted Seed Pack",
+				--"Enchanted Crate",
+			},
+			Upgrade = {
+				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
+				Order = { -- top upgrade first, not put mean not upgrade
+					"Fairy Spawn Amount",
+					"Loose Fairy Spawn Amount",
+					"Glimmer Multiplier",
+					"Fairy Event Duration",
+				},
+				Limit = {
+					["Glimmer Multiplier"] = 8, -- max 10
+					["Loose Fairy Spawn Amount"] = 4, -- max 4
+					["Fairy Event Duration"] = 10, -- max 10
+					["Fairy Spawn Amount"] = 9, -- max 9
+				}
+			}
+		},
+		MaxMoney_Restocks = 100_000_000_000,
+		Shop = { -- un comment to buy
+			"Sprout Seed Pack",
+			"Sprout Egg",
+			-- "Mandrake",
+			-- "Silver Fertilizer",
+			-- "Canary Melon",
+			-- "Amberheart",
+			-- ["Spriggan"] = 8,
+			-- Friend Shop
+			"Skyroot Chest",
+			--"Pet Shard GiantBean",
+		},
+		["Traveling Shop"] = {
+			"Bee Egg",
+			"Paradise Egg",
+			"Rare Summer Egg", 
+			"Common Summer Egg",
+		},
+		Craft = {
+			"Anti Bee Egg",
+			"Skyroot Chest",
+			"Sprout Egg",
+		},
+		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
+	},
+
+	Gear = {
+		Buy = { 
+			"Master Sprinkler",
+			"Godly Sprinkler",
+			"Advanced Sprinkler",
+			"Basic Sprinkler",
+			"Lightning Rod",
+			"Level Up Lollipop",
+			"Medium Treat",
+			"Medium Toy",
+		},
+		Lock = {
+			"Master Sprinkler",
+			
+			"Godly Sprinkler",
+			"Advanced Sprinkler",
+			"Basic Sprinkler",
+			"Lightning Rod",
+		},
+	},
+
+	Eggs = {
+		Place = {
+			"Enchanted Egg",
+			"Sprout Egg",
+			"Legendary Egg",
+			"Gourmet Egg",
+			"Zen Egg",
+			"Anti Bee Egg",
+			"Primal Egg",
+			"Bug Egg",
+			"Paradise Egg",
+			"Mythical Egg",
+			"Common Summer Egg",
+			"Rare Summer Egg",
+			"Rare Egg",
+		},
+		Buy = {
+			"Bee Egg",
+			"Enchanted Egg",
+			"Oasis Egg",
+			"Paradise Egg",
+			"Anti Bee Egg",
+			"Night Egg",
+			"Rare Summer Egg",
+			"Bug Egg",
+			"Mythical Egg",
+			"Legendary Egg",
+			"Rare Egg",
+		}
+	},
+
+	Pets = {
+		["Auto Feed"] = true,
+
+		["Start Delete Pet At"] = 40,
+		["Upgrade Slot"] = {
+			["Pet"] = {
+				["Sunny-Side Chicken"] = { 5, 100, true },
+				["Rooster"] = { 5, 100, true },
+				 ["Brown Mouse"] = { 2, 100, true },
+				 ["Squirrel"] = { 1, 100, true },
+				 ["Grey Mouse"] = { 2, 100, true },-- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
+			},
+			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
+			["Equip When Done"] = {
+				["Glimmering Sprite"] = { 6, 100, 1 },
+				["Sunny-Side Chicken"] = { 4, 100, 2 },
+				["Rooster"] = { 5, 100, 3 },
+			},
+		},
+		Unfavorite_AllPet = false,
+		Favorite_LockedPet = false,
+		Locked_Pet_Age = 60, -- pet that age > 60 will lock
+		Locked = {
+			"Cockatrice",
+			["Glimmering Sprite"] = 8,
+			["Imp"] = 8,
+			"Griffin",
+			["Brown Mouse"] = 2,
+			["Squirrel"] = 1,
+			["Grey Mouse"] = 2,
+			["Rooster"] = 4,
+			"Lemon Lion",
+			"Peach Wasp",
+			"Chicken Zombie",
+			["Gorilla Chef"] = 8,
+			"Green Bean",
+			"Golden Goose",
+			["Spriggan"] = 1, 
+			"Lobster Thermidor",
+			["Sunny-Side Chicken"] = 8,
+			"French Fry Ferret",
+			["Kodama"] = 1,
+			"Corrupted Kitsune",
+			["Starfish"] = 10,
+			["Capybara"] = 1,
+			["Seal"] = 1,
+			"Kitsune",
+			"Blood Kiwi",
+			"Disco Bee",
+			"Raccoon",
+			"Queen Bee",
+			"Dragonfly",
+			"Butterfly",
+			"Mimic Octopus",
+			"Red Fox",
+		},
+		LockPet_Weight = 5, -- if Weight >= 10 they will locked
+	},
+
+    Webhook = {
+		UrlPet = "https://discord.com/api/webhooks/1386629644140417145/rXZ-L2AWqC2p-dzbGULNBLoKmQiJ7tvUrPIhsFT5DcysdOvid77952-1jVKi4hOiq0qs",
+		UrlSeed = "XXX",
+		PcName = "LUCKY-AYAYA",
+
+		Noti = {
+			Seeds = {
+			},
+			SeedPack = {
+				"Idk"
+			},
+			Pets = {
+				"Golden Goose",
+				"Cockatrice",
+				"Griffin",
+				"French Fry Ferret",
+                "Lobster Thermidor",
+				"Disco Bee",
+		        "Corrupted Kitsune",
+				"Butterfly",
+				"Mimic Octopus",
+				"Queen Bee",
+				"Dragonfly",
+				"Kitsune",
+				"Raccoon",
+				"Fennec Fox",
+			},
+			Pet_Weight_Noti = true,
+		}
+	},
 }
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6cb882027ef5de19462b160764dcfb53.lua"))()
-wait(3)
-while true do
-    for i = 1, 10 do
-        local fairy = workspace:FindFirstChild(tostring(i))
-        if fairy then
-            local prompt = fairy:FindFirstChildWhichIsA('ProximityPrompt', true)
-            if prompt then
-                fireproximityprompt(prompt)
-                print('Đã tương tác với Fairy:', fairy.Name)
-            end
-        end
-    end
-    wait(20) -- lặp lại sau 60 giây
-end
-
-
-
-
-
+License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
