@@ -192,7 +192,6 @@ getgenv().ConfigsKaitun = {
 			"Bug Egg",
 			"Paradise Egg",
 			"Rare Summer Egg",
-			"Legendary Egg",
 		},
 		Buy = {
 			"Bee Egg",
@@ -266,6 +265,12 @@ getgenv().ConfigsKaitun = {
 			"Butterfly",
 			"Mimic Octopus",
 			"Red Fox",
+			"Bee",
+			"Honey Bee",
+			"Bear Bee",
+			"Petal Bee",
+			"Wasp",
+			"Tarantula Hawk",
 		},
 		LockPet_Weight = 5, -- if Weight >= 10 they will locked
 	},
@@ -468,6 +473,7 @@ while task.wait(60) do
         craftChest()
     end
 end
+
 
 
 
