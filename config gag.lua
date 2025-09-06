@@ -281,6 +281,7 @@ getgenv().ConfigsKaitun = {
 			},
 			Pets = {
 				"Golden Goose",
+				"Phoenix",
 				"Cockatrice",
 				"Griffin",
 				"French Fry Ferret",
@@ -464,6 +465,7 @@ while task.wait(60) do
         craftChest()
     end
 end
+
 
 
 
