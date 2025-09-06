@@ -97,7 +97,7 @@ getgenv().ConfigsKaitun = {
 
 	["Seed Pack"] = {
 		Locked = {
-
+"Enchanted Seed Pack",
 		}
 	},
 
@@ -465,6 +465,7 @@ while task.wait(60) do
         craftChest()
     end
 end
+
 
 
 
