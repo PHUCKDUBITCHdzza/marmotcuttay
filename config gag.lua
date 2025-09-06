@@ -318,6 +318,7 @@ while true do
     wait(25) -- lặp lại sau 60 giây
 end
 
+wait(4)
 -- 🌟 Auto Harvest Sunbulb + Auto Craft Seed Pack/Chest
 local Players = game:GetService("Players")
 local Rep = game:GetService("ReplicatedStorage")
@@ -465,6 +466,7 @@ while task.wait(60) do
         craftChest()
     end
 end
+
 
 
 
