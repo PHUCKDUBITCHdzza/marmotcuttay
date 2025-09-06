@@ -313,68 +313,152 @@ while true do
     wait(25) -- lặp lại sau 60 giây
 end
 
-wait(2)
-local Rep = game:GetService('ReplicatedStorage')
-local CraftRemote = Rep.GameEvents.CraftingGlobalObjectService
-local bench =
-    workspace.Interaction.UpdateItems.FairyGenius.FairyWorldCraftingWorkBench
-local player = game.Players.LocalPlayer
+-- 🌟 Auto Harvest Sunbulb + Auto Craft Seed Pack/Chest
+local Players = game:GetService("Players")
+local Rep = game:GetService("ReplicatedStorage")
+local CollectionService = game:GetService("CollectionService")
 
--- Hàm lấy UUID từ Backpack/Character
-local function getUUID(itemName)
-    for _, item in ipairs(player.Backpack:GetChildren()) do
-        if string.find(item.Name, itemName) then
-            return item:GetAttribute('c')
+local localPlayer = Players.LocalPlayer
+local DataService = require(Rep.Modules.DataService)
+
+local CollectRemote = Rep.GameEvents.Crops.Collect
+local SubmitFairy = Rep.GameEvents.FairyService.SubmitFairyFountainAllPlants
+local CraftRemote = Rep.GameEvents.CraftingGlobalObjectService
+local bench = workspace.Interaction.UpdateItems.FairyGenius.FairyWorldCraftingWorkBench
+
+-- ⚙️ Config
+local INTERVAL = 50      -- giây giữa mỗi vòng harvest
+local LIMIT = 20         -- số trái Sunbulb tối đa mỗi vòng
+local FIRE_DELAY = 2     -- delay giữa các lần thu hoạch
+local SUBMIT_DELAY = 1   -- delay giữa 2 lần submit
+local USE_FARM_ONLY = true -- true = chỉ quét farm của bạn
+
+-- Farm folder
+local farmFolder
+pcall(function()
+    if workspace:FindFirstChild("Farm") and workspace.Farm:FindFirstChild("Farm") then
+        farmFolder = workspace.Farm.Farm
+    end
+end)
+
+-- Kiểm tra CollectPrompt tag
+local function hasCollectTag(obj)
+    if type(obj.HasTag) == "function" then
+        local ok, res = pcall(function()
+            return obj:HasTag("CollectPrompt")
+        end)
+        if ok then return res end
+    end
+    return CollectionService:HasTag(obj, "CollectPrompt")
+end
+
+-- ✅ Hàm thu hoạch Sunbulb
+local function harvestSunbulb(limit)
+    local collected = 0
+    local descendants = USE_FARM_ONLY and farmFolder:GetDescendants() or workspace:GetDescendants()
+
+    for _, inst in ipairs(descendants) do
+        if inst:IsA("ProximityPrompt") and hasCollectTag(inst) then
+            local crop = inst.Parent and inst.Parent.Parent
+            if crop and crop.Name == "Sunbulb" then
+                CollectRemote:FireServer({ crop })
+                task.wait(FIRE_DELAY)
+
+                -- Submit ngay sau mỗi trái
+                SubmitFairy:FireServer()
+                task.wait(SUBMIT_DELAY)
+                SubmitFairy:FireServer()
+
+                collected += 1
+                if collected >= limit then break end
+            end
         end
     end
-    for _, item in ipairs(player.Character:GetChildren()) do
+    return collected
+end
+
+-- 🔑 Lấy UUID từ Backpack/Character
+local function getUUID(itemName)
+    for _, item in ipairs(localPlayer.Backpack:GetChildren()) do
         if string.find(item.Name, itemName) then
-            return item:GetAttribute('c')
+            return item:GetAttribute("c")
+        end
+    end
+    for _, item in ipairs(localPlayer.Character:GetChildren()) do
+        if string.find(item.Name, itemName) then
+            return item:GetAttribute("c")
         end
     end
     return nil
 end
 
--- Hàm auto craft 1 lần
-local function autoCraft()
-    -- chọn công thức
-    CraftRemote:FireServer(
-        'SetRecipe',
-        bench,
-        'FairyWorldCraftingWorkBench',
-        'Enchanted Chest'
-    )
+-- Đếm số lượng item trong Backpack
+local function countItem(itemName)
+    local count = 0
+    for _, item in ipairs(localPlayer.Backpack:GetChildren()) do
+        if string.find(item.Name, itemName) then
+            count += 1
+        end
+    end
+    return count
+end
 
-    -- nhét nguyên liệu
+-- 🧪 Craft Enchanted Seed Pack
+local function craftSeedPack()
+    CraftRemote:FireServer("SetRecipe", bench, "FairyWorldCraftingWorkBench", "Enchanted Seed Pack")
+
     local items = {
-        { slot = 1, Name = 'Sunbulb', Type = 'Holdable' },
-        { slot = 2, Name = 'Enchanted Seed Pack', Type = 'Seed Pack' },
-        { slot = 3, Name = 'Enchanted Egg', Type = 'PetEgg' },
+        {slot = 1, Name = "Mushroom Seed", Type = "Seed"},
+        {slot = 2, Name = "Mushroom Seed", Type = "Seed"},
     }
 
     for _, v in ipairs(items) do
         local uuid = getUUID(v.Name)
         if uuid then
-            CraftRemote:FireServer(
-                'InputItem',
-                bench,
-                'FairyWorldCraftingWorkBench',
-                v.slot,
-                {
-                    ItemType = v.Type,
-                    ItemData = { UUID = uuid },
-                }
-            )
+            CraftRemote:FireServer("InputItem", bench, "FairyWorldCraftingWorkBench", v.slot, {
+                ItemType = v.Type,
+                ItemData = {UUID = uuid}
+            })
         end
     end
 
-    -- thực hiện craft
-    CraftRemote:FireServer('Craft', bench, 'FairyWorldCraftingWorkBench')
+    CraftRemote:FireServer("Craft", bench, "FairyWorldCraftingWorkBench")
 end
 
--- 🔄 Vòng lặp auto craft
-while task.wait(30) do -- chỉnh số giây delay tùy ý
-    autoCraft()
+-- 🧰 Craft Enchanted Chest
+local function craftChest()
+    CraftRemote:FireServer("SetRecipe", bench, "FairyWorldCraftingWorkBench", "Enchanted Chest")
+
+    local items = {
+        {slot = 1, Name = "Sunbulb", Type = "Holdable"},
+        {slot = 2, Name = "Enchanted Seed Pack", Type = "Seed Pack"},
+        {slot = 3, Name = "Enchanted Egg", Type = "PetEgg"},
+    }
+
+    for _, v in ipairs(items) do
+        local uuid = getUUID(v.Name)
+        if uuid then
+            CraftRemote:FireServer("InputItem", bench, "FairyWorldCraftingWorkBench", v.slot, {
+                ItemType = v.Type,
+                ItemData = {UUID = uuid}
+            })
+        end
+    end
+
+    CraftRemote:FireServer("Craft", bench, "FairyWorldCraftingWorkBench")
+end
+
+-- 🔄 Main loop
+while task.wait(60) do
+    -- Thu hoạch Sunbulb mỗi vòng
+    harvestSunbulb(LIMIT)
+
+    -- Craft theo logic
+    if countItem("Enchanted Seed Pack") < 1 then
+        craftSeedPack()
+    else
+        craftChest()
+    end
 end
 
 
