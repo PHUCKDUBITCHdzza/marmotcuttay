@@ -126,8 +126,11 @@ getgenv().ConfigsKaitun = {
 				}
 			}
 		},
-		MaxMoney_Restocks = 50_000_000_000_000,
+		MaxMoney_Restocks = 5_000_000_000_000,
 		Shop = { -- un comment to buy
+			"Enchanted Egg",
+			"Enchanted Seed Pack",
+			"Drake",
 			"Sprout Seed Pack",
 			"Sprout Egg",
 			-- "Mandrake",
@@ -136,20 +139,22 @@ getgenv().ConfigsKaitun = {
 			-- "Amberheart",
 			-- ["Spriggan"] = 8,
 			-- Friend Shop
-			"Sprout Egg",
 			"Skyroot Chest",
-			"Pet Shard GiantBean",
+		},
+		Craft = {
+			"Enchanted Chest",
+			"Enchanted Egg",
+			"Anti Bee Egg",
+			"Sprout Egg",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
 			"Paradise Egg",
 			"Rare Summer Egg", 
 			"Common Summer Egg",
-		},
-		Craft = {
-			"Anti Bee Egg",
-			"Skyroot Chest",
-			"Sprout Egg",
+			"Pitcher Plant",
+			"Feijoa",
+			"Loquat",
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
@@ -460,6 +465,7 @@ while task.wait(60) do
         craftChest()
     end
 end
+
 
 
 
