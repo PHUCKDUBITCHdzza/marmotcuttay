@@ -130,7 +130,6 @@ getgenv().ConfigsKaitun = {
 		Shop = { -- un comment to buy
 			"Enchanted Egg",
 			"Enchanted Seed Pack",
-			"Drake",
 			"Sprout Seed Pack",
 			"Sprout Egg",
 			-- "Mandrake",
@@ -465,6 +464,7 @@ while task.wait(60) do
         craftChest()
     end
 end
+
 
 
 
