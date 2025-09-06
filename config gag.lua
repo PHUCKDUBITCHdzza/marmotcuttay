@@ -310,21 +310,6 @@ getgenv().ConfigsKaitun = {
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
 
-wait(2)
-while true do
-    for i = 1, 10 do
-        local fairy = workspace:FindFirstChild(tostring(i))
-        if fairy then
-            local prompt = fairy:FindFirstChildWhichIsA('ProximityPrompt', true)
-            if prompt then
-                fireproximityprompt(prompt)
-                print('Đã tương tác với Fairy:', fairy.Name)
-            end
-        end
-    end
-    wait(25) -- lặp lại sau 60 giây
-end
-
 wait(4)
 -- 🌟 Auto Harvest Sunbulb + Auto Craft Seed Pack/Chest
 local Players = game:GetService("Players")
@@ -473,6 +458,7 @@ while task.wait(60) do
         craftChest()
     end
 end
+
 
 
 
