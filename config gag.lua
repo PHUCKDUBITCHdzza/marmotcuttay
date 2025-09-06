@@ -228,6 +228,7 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Cockatrice",
+			"Phoenix",
 			["Glimmering Sprite"] = 8,
 			["Imp"] = 3,
 			"Griffin",
@@ -310,6 +311,7 @@ while true do
     end
     wait(30) -- lặp lại sau 60 giây
 end
+
 
 
 
