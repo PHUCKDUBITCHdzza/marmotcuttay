@@ -25,8 +25,8 @@ getgenv().gagConfig = {
     DESTROY_UNTIL_MIN_PLANTS = 300,
     DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Cauliflower", "Apple" },
 
-    BUY_EGGS = { ["Legendary Egg"] = 99, "Mythical Egg", "Bug Egg", "Bee Egg", "Paradise Egg", ["Common Summer Egg"] = 99, ["Rare Summer Egg"] = 99, ["Rare Egg"] = 99},
-    PLANT_EGGS = { "Enchanted Egg", "Sprout Egg", "Gourmet Egg", "Zen Egg", "Anti Bee Egg", "Primal Egg", "Bug Egg", "Paradise Egg", "Mythical Egg", "Common Summer Egg", "Rare Summer Egg", "Rare Egg" },
+    BUY_EGGS = { ["Legendary Egg"] = 99, "Mythical Egg", "Bug Egg", "Bee Egg", "Paradise Egg", "Common Summer Egg", "Rare Summer Egg", "Rare Egg" },
+    PLANT_EGGS = { "Enchanted Egg", "Gourmet Egg", "Zen Egg", "Anti Bee Egg", "Primal Egg", "Bug Egg", "Paradise Egg", "Sprout Egg", "Mythical Egg", "Common Summer Egg", "Rare Summer Egg", "Rare Egg" },
     
     -- BUY_SEED_SHOP Priority (Left -> Right)
     BUY_SEED_SHOP = { ["Sunbulb"] = 10, ["Glimmering Sprite"] = 10, ["Romanesco"] = 10, ["Giant Pinecone"] = 10, ["Burning Bud"] = 10, ["Sugar Apple"] = 10, ["Ember Lily"] = 10, ["Beanstalk"] = 10, ["Cacao"] = 10, ["Pepper"] = 10, ["Mushroom"] = 10, ["Grape"] = 10, ["Mango"] = 10, ["Dragon Fruit"] = 10, ["Cactus"] = 10, ["Coconut"] = 10, ["Bamboo"] = 10, ["Apple"] = 10, ["Pumpkin"] = 10, ["Watermelon"] = 10, ["Daffodil"] = 10, ["Tomato"] = 10, ["Orange Tulip"] = 10, ["Blueberry"] = 10, ["Strawberry"] = 10, ["Carrot"] = 10 },
@@ -317,5 +317,6 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
 
 
