@@ -130,6 +130,7 @@ getgenv().ConfigsKaitun = {
 		},
 		MaxMoney_Restocks = 5_000_000_000_000,
 		Shop = { -- un comment to buy
+			"Enchanted Chest",
 			"Enchanted Egg",
 			"Enchanted Seed Pack",
 			"Sprout Seed Pack",
@@ -589,5 +590,6 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
 
 
