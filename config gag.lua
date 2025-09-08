@@ -224,12 +224,18 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 5, 100, 1 },
-                ["Sunny-Side Chicken"] = { 3, 100, 2 },
-                ["Starfish"] = { 5, 100, 3 },
-            	["Brown Mouse"] = { 3, 100, 4 },
-                ["Grey Mouse"] = { 3, 100, 5 },
-                ["Rooster"] = { 4, 100, 6 },
+				["Bee"] = { 5, 100, 1 },
+				["Honey Bee"] = { 5, 100, 2 },
+				["Bear Bee"] = { 5, 100, 3 },
+				["Petal Bee"] = { 5, 100, 4 },
+				["Wasp"] = { 5, 100, 5 },
+				["Tarantula Hawk"] = { 5, 100, 6 },
+				["Glimmering Sprite"] = { 5, 100, 7 },
+                ["Sunny-Side Chicken"] = { 3, 100, 8 },
+                ["Starfish"] = { 5, 100, 9 },
+            	["Brown Mouse"] = { 3, 100, 10 },
+                ["Grey Mouse"] = { 3, 100, 11 },
+                ["Rooster"] = { 4, 100, 12 },
 			},
 		},
 		Unfavorite_AllPet = false,
@@ -575,3 +581,4 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
