@@ -136,6 +136,10 @@ getgenv().ConfigsKaitun = {
 			"Sprout Egg",
 			"Luminous Sprite",
 			"Mutation Spray Luminous",
+			"Drake",
+			"Wisp",
+			"Luminous Sprite",
+			"Wisp Well",
 			-- "Mandrake",
 			-- "Silver Fertilizer",
 			-- "Canary Melon",
@@ -243,6 +247,10 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Cockatrice",
+			"Drake",
+			"Wisp",
+			"Luminous Sprite",
+			"Wisp Well",
 			"Phoenix",
 			["Glimmering Sprite"] = 8,
 			["Imp"] = 3,
@@ -581,4 +589,5 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
 
