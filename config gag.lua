@@ -8,7 +8,7 @@ getgenv().gagConfig = {
     MAX_EVENT_RESTOCK_SHECKLES = 5_000_000_000_000,
     BUY_EVENT_SHOP = { "Enchanted Chest", "Enchanted Egg", "Enchanted Seed Pack", "Luminous Sprite", "Mutation Spray Luminous", "Drake", "Wisp", "Wisp Well" },
     
-    CLAIM_FAIRY_REWARD = { "Mutation Spray Glimmering", "Enchanted Egg", "Enchanted Seed Pack", "FairyPoints", "Fairy Targeter" },
+    CLAIM_FAIRY_REWARD = { "Enchanted Egg", "Enchanted Seed Pack", "FairyPoints", "Mutation Spray Glimmering", "Fairy Targeter" },
     CLAIM_FOOD_CONNOISSEUR_REWARD = {"Culinarian Chest", "Gourmet Egg", "Gorilla Chef"},
     PLANT_EVENT_TREES = false,
 
@@ -317,5 +317,6 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
 
 
