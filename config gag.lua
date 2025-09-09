@@ -3,7 +3,7 @@ setfpscap(2)
 
 getgenv().gagConfig = {
     -- Event:
-    CRAFT_EVENT = { "Enchanted Chest", "Fairy Net", "Enchanted Seed Pack", "Anti Bee Egg", "Mutation Spray Glimmering" },
+    CRAFT_EVENT = { "Enchanted Chest", "Enchanted Egg", "Fairy Net", "Enchanted Seed Pack", "Anti Bee Egg", "Mutation Spray Glimmering" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Primal Egg", "Paradise Egg", "Rare Summer Egg", "Common Summer Egg" },
     MAX_EVENT_RESTOCK_SHECKLES = 5_000_000_000_000,
     BUY_EVENT_SHOP = { "Enchanted Chest", "Enchanted Egg", "Enchanted Seed Pack", "Luminous Sprite", "Mutation Spray Luminous", "Drake", "Wisp", "Wisp Well" },
@@ -317,6 +317,7 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
 
 
 
