@@ -35,7 +35,7 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},
     SKIP_HARVEST_MUTATIONS = {},
 
-    KEEP_PETS = { ["Drake"] = 2, ["Wisp"] = 2, ["Luminous Sprite"] = 3, ["Wisp Well"] = 2, "Cockatrice", "Phoenix", ["Glimmering Sprite"] = 8, ["Imp"] = 2, "Griffin", ["Brown Mouse"] = 2, ["Squirrel"] = 1, ["Grey Mouse"] = 2, ["Rooster"] = 4, "Lemon Lion", "Peach Wasp", "Chicken Zombie", ["Gorilla Chef"] = 8, "Green Bean", "Golden Goose", ["Spriggan"] = 1, "Lobster Thermidor", ["Sunny-Side Chicken"] = 8, "French Fry Ferret", ["Kodama"] = 1, "Corrupted Kitsune", ["Starfish"] = 10, ["Capybara"] = 1, ["Seal"] = 1, "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon","Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Bee", "Honey Bee", "Bear Bee", "Petal Bee", "Wasp", "Tarantula Hawk" },
+    KEEP_PETS = { ["Shroomie"] = 1, ["Drake"] = 2, ["Wisp"] = 2, ["Luminous Sprite"] = 3, ["Wisp Well"] = 2, "Cockatrice", "Phoenix", ["Glimmering Sprite"] = 8, ["Imp"] = 2, "Griffin", ["Brown Mouse"] = 2, ["Squirrel"] = 1, ["Grey Mouse"] = 2, ["Rooster"] = 4, "Lemon Lion", "Peach Wasp", "Chicken Zombie", ["Gorilla Chef"] = 8, "Green Bean", "Golden Goose", ["Spriggan"] = 1, "Lobster Thermidor", ["Sunny-Side Chicken"] = 8, "French Fry Ferret", ["Kodama"] = 1, "Corrupted Kitsune", ["Starfish"] = 10, ["Capybara"] = 1, ["Seal"] = 1, "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon","Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Bee", "Honey Bee", "Bear Bee", "Petal Bee", "Wasp", "Tarantula Hawk" },
     KEEP_PETS_WEIGHT = 5,
 
     -- EQUIP_PETS Priority (Left -> Right)
@@ -317,4 +317,5 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
 
