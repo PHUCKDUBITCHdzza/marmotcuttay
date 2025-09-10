@@ -149,7 +149,6 @@ getgenv().ConfigsKaitun = {
 			"Skyroot Chest",
 		},
 		Craft = {
-			"Fairy Net",
 			"Enchanted Chest",
 			"Enchanted Egg",
 			"Anti Bee Egg",
@@ -553,3 +552,4 @@ task.spawn(function()
         end
     end
 end)
+
