@@ -151,6 +151,9 @@ getgenv().ConfigsKaitun = {
 		Craft = {
 			"Enchanted Chest",
 			"Enchanted Egg",
+			"Fairy Summoner",
+            "Fairy Power Extender",
+            "Fairy Caller",
 			"Anti Bee Egg",
 			"Sprout Egg",
 		},
@@ -338,218 +341,89 @@ getgenv().ConfigsKaitun = {
 }
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
--- 🌟 Auto Fairy Event Script (Switch by Score)
+-- 🌟 Auto Equip Tools (Enchanted Chest + Fairy Power Extender)
 local Players = game:GetService('Players')
-local Rep = game:GetService('ReplicatedStorage')
-local DataService = require(Rep.Modules.DataService)
 local localPlayer = Players.LocalPlayer
 
--- 🔮 Các remote quan trọng
-local FairyNetEvent = Rep.GameEvents.FairyNetActivated
-local FairyEventVisuals = require(Rep.Modules.FairyEventVisualsController)
-
--- 🧰 Utility
-local function getFairyCount()
-    local data = DataService:GetData()
-    if data and data.FairyEvent then
-        return (data.FairyEvent.FairiesCapturedWithNetV1 or 0)
-            + (data.FairyEvent.FairiesCapturedWithNetV2 or 0)
-    end
-    return 0
-end
-
-local function equipItemContains(keyword)
+-- 🧰 Hàm trang bị Enchanted Chest
+local function equipEnchantedChest()
+    -- Nếu đã cầm trên tay rồi thì thôi
     for _, tool in ipairs(localPlayer.Character:GetChildren()) do
-        if tool:IsA('Tool') and string.find(tool.Name, keyword) then
+        if tool:IsA('Tool') and string.find(tool.Name, 'Fairy Summoner') then
             return tool
         end
     end
+
+    -- Nếu còn trong Backpack thì auto equip
     for _, tool in ipairs(localPlayer.Backpack:GetChildren()) do
-        if tool:IsA('Tool') and string.find(tool.Name, keyword) then
+        if tool:IsA('Tool') and string.find(tool.Name, 'Fairy Summoner') then
             tool.Parent = localPlayer.Character
+            print('📦 Đã auto cầm Enchanted Chest!')
             return tool
         end
     end
-    return nil
 end
 
--- 🧚 Collect Fairy gần
-local char = localPlayer.Character or localPlayer.CharacterAdded:Wait()
-local hrp = char:WaitForChild('HumanoidRootPart')
-
-local function collectNearbyFairies()
-    local fairies = FairyEventVisuals:GetAllFairies()
-    local nearby = {}
-    for _, fairy in ipairs(fairies) do
-        if (fairy.Position - hrp.Position).Magnitude <= 10 then
-            table.insert(nearby, fairy.Id)
-        end
-        if #nearby >= 3 then
-            break
+-- 🧰 Hàm trang bị Fairy Power Extender
+local function equipFairyPowerExtender()
+    -- Nếu đã cầm trên tay rồi thì thôi
+    for _, tool in ipairs(localPlayer.Character:GetChildren()) do
+        if
+            tool:IsA('Tool') and string.find(tool.Name, 'Fairy Power Extender')
+        then
+            return tool
         end
     end
-    if #nearby > 0 then
-        local net = equipItemContains('Fairy Net')
-        if net then
-            FairyNetEvent:FireServer(nearby)
-            local sound = net:FindFirstChild('CollectSound')
-            if sound then
-                sound:Play()
-            end
+
+    -- Nếu còn trong Backpack thì auto equip
+    for _, tool in ipairs(localPlayer.Backpack:GetChildren()) do
+        if
+            tool:IsA('Tool') and string.find(tool.Name, 'Fairy Power Extender')
+        then
+            tool.Parent = localPlayer.Character
+            print('📦 Đã auto cầm Fairy Power Extender!')
+            return tool
         end
     end
 end
 
--- 🌌 Script 1: Fake teleport + FairyNet
-local function runNetMode()
-    while task.wait(1) do
-        local score = getFairyCount()
-        if score < 900 then
-            print('🔁 Chuyển sang Auto Interact Mode!')
-            break -- thoát vòng loop này
-        end
+-- 🧚 Hàm gọi Fairy Summoner skill
+local function fairySummoner()
+    local args = {
+        [1] = true,
+        [2] = CFrame.new(-9.378669738769531, 0, -49.54979705810547)
+            * CFrame.Angles(
+                -1.340797781944275,
+                1.1134178638458252,
+                1.3155239820480347
+            ),
+    }
 
-        if equipItemContains('Fairy Net') then
-            for i = 1, 10 do
-                local folder = workspace:FindFirstChild(tostring(i))
-                if folder then
-                    for _, obj in ipairs(folder:GetChildren()) do
-                        local objCF
-                        if obj:IsA('Model') and obj.PrimaryPart then
-                            objCF = obj:GetPivot()
-                        elseif obj:IsA('Part') then
-                            objCF = obj.CFrame
-                        end
-                        if objCF then
-                            local objPos = objCF.Position
-                            local forward = objCF.LookVector * 4
-                            local targetPos = objPos
-                                + forward
-                                + Vector3.new(0, 1, 0)
-                            hrp.CFrame = CFrame.new(targetPos, objPos)
-
-                            -- camera follow
-                            workspace.CurrentCamera.CFrame = CFrame.new(
-                                objPos + Vector3.new(0, 10, 15),
-                                objPos
-                            )
-
-                            collectNearbyFairies()
-                            task.wait(0.5)
-                        end
-                    end
-                end
-            end
-        end
+    local char = localPlayer.Character
+    if
+        char
+        and char:FindFirstChild('InputGateway')
+        and char.InputGateway:FindFirstChild('Activation')
+    then
+        char.InputGateway.Activation:FireServer(unpack(args))
+        print('✨ Fairy Summoner skill đã được kích hoạt!')
+    else
+        warn('⚠️ Không tìm thấy Activation trong InputGateway')
     end
 end
 
--- 🌌 Script 2: Auto interact fairy bằng prompt
-local function runInteractMode()
-    while task.wait(5) do
-        local score = getFairyCount()
-        if score > 900 then
-            print('🔁 Quay lại Net Mode!')
-            break
-        end
-
-        for i = 1, 10 do
-            local fairy = workspace:FindFirstChild(tostring(i))
-            if fairy then
-                local prompt =
-                    fairy:FindFirstChildWhichIsA('ProximityPrompt', true)
-                if prompt then
-                    fireproximityprompt(prompt)
-                    print('✨ Đã tương tác với Fairy:', fairy.Name)
-                end
-            end
-        end
-    end
-end
-
--- 🔄 Vòng điều khiển chính
+-- 🔄 Luôn giữ trên tay & dùng skill (mỗi 10s)
 task.spawn(function()
-    while task.wait(2) do
-        local score = getFairyCount()
-        if score < 900 then
-            print('📊 Điểm hiện tại:', score, '→ chạy Net Mode')
-            runNetMode()
-        else
-            print(
-                '📊 Điểm hiện tại:',
-                score,
-                '→ chạy Interact Mode'
-            )
-            runInteractMode()
-        end
+    while task.wait(10) do
+        equipEnchantedChest()
+        fairySummoner()
     end
 end)
-
--- 🟢 Auto teleport + nộp jar + mua item shop
-local npc =
-    workspace.Interaction.UpdateItems.FairyIsland.FairyIsland['Luminous Sprite']
+wait(3)
+-- 🔄 Luôn giữ trên tay & dùng skill (mỗi 10s)
 task.spawn(function()
-    while task.wait(30) do
-        Rep.GameEvents.FairyService.TeleportFairyWorld:FireServer()
-        print('🌌 Đã teleport vào Fairy World!')
-        task.wait(2)
-
-        local npcPos = npc.PrimaryPart.Position
-        local targetPos = npcPos + Vector3.new(0, 6, 0)
-        hrp.CFrame = CFrame.lookAt(targetPos, npcPos, Vector3.new(0, 1, 0))
-
-        Rep.GameEvents.FairyService.FairySubmitAllJar:FireServer()
-        print('📦 FairySubmitAllJar đã gửi!')
-
-        local args1 = { 'Enchanted Chest', 2 }
-        Rep.GameEvents.BuyEventShopStock:FireServer(unpack(args1))
-        print('💎 Đã mua Enchanted Chest x2!')
-
-        local args2 = { 'Luminous Sprite', 2 }
-        Rep.GameEvents.BuyEventShopStock:FireServer(unpack(args2))
-        print('✨ Đã mua Luminous Sprite x2!')
+    while task.wait(10) do
+        equipFairyPowerExtender()
+        fairySummoner()
     end
 end)
-
--- 🟢 Teleport + collect RewardPoint1 → RewardPoint20
-print('🔍 Bắt đầu teleport + collect RewardPoint1 → RewardPoint20...')
-local function tryCollect(point)
-    if not point or not point.Parent then
-        return false
-    end
-    for _, descendant in ipairs(point:GetDescendants()) do
-        if descendant:IsA('ProximityPrompt') and descendant.Enabled then
-            fireproximityprompt(descendant)
-            print('✅ Đã lấy RewardPoint:', point.Name)
-            return true
-        end
-    end
-    return false
-end
-
-task.spawn(function()
-    while task.wait(20) do
-        for i = 1, 20 do
-            local point = workspace:FindFirstChild('RewardPoint' .. i)
-            if point then
-                local objCF
-                if point:IsA('Model') and point.PrimaryPart then
-                    objCF = point:GetPivot()
-                elseif point:IsA('BasePart') then
-                    objCF = point.CFrame
-                end
-                if objCF then
-                    local objPos = objCF.Position
-                    local forward = objCF.LookVector * 3
-                    local targetPos = objPos + forward + Vector3.new(0, 1, 0)
-                    hrp.CFrame = CFrame.new(targetPos, objPos)
-                    workspace.CurrentCamera.CFrame =
-                        CFrame.new(objPos + Vector3.new(0, 10, 15), objPos)
-                    task.wait(0.4)
-                    tryCollect(point)
-                end
-            end
-        end
-    end
-end)
-
