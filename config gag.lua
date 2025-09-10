@@ -124,12 +124,14 @@ getgenv().ConfigsKaitun = {
 					"Fairy Event Duration",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 10, -- max 10
-					["Loose Fairy Spawn Amount"] = 10, -- max 10
-					["Fairy Event Duration"] = 10, -- max 10
-					["Fairy Spawn Amount"] = 9, -- max 9
+					["Glimmer Multiplier"] = 8, -- max 10
+					["Loose Fairy Spawn Amount"] = 8, -- max 10
+					["Fairy Event Duration"] = 8, -- max 10
+					["Fairy Spawn Amount"] = 8, -- max 9
 				}
-			}
+			},
+		Minimum_Fairy_Point_Restock = 5000, -- if fairy point more then this will restock
+        Catch_Fairy_Before_Restock = 51, -- fr it 50 but to be sure i put 51
 		},
 		MaxMoney_Restocks = 1_000_000_000_000,
 		Shop = { -- un comment to buy
@@ -597,5 +599,6 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
 
 
