@@ -124,7 +124,7 @@ getgenv().ConfigsKaitun = {
 					"Fairy Event Duration",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 1, -- max 10
+					["Glimmer Multiplier"] = 10, -- max 10
 					["Loose Fairy Spawn Amount"] = 10, -- max 10
 					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
@@ -136,10 +136,6 @@ getgenv().ConfigsKaitun = {
 			"Enchanted Chest",
 			"Enchanted Egg",
 			"Enchanted Seed Pack",
-			"Drake",
-			"Wisp",
-			"Luminous Sprite",
-
 			"Sprout Seed Pack",
 			"Sprout Egg",
 			-- "Mandrake",
@@ -601,4 +597,5 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
 
