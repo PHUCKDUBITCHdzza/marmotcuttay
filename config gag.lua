@@ -177,7 +177,7 @@ getgenv().ConfigsKaitun = {
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
 			"Lightning Rod",
-			"Level Up Lollipop"
+			"Level Up Lollipop",
 			"Medium Treat",
 			"Medium Toy",
 		},
@@ -428,6 +428,7 @@ task.spawn(function()
         fairySummoner()
     end
 end)
+
 
 
 
