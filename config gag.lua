@@ -171,7 +171,6 @@ getgenv().ConfigsKaitun = {
 
 	Gear = {
 		Buy = { 
-			"Harvest Tool",
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Grandmaster Sprinkler",
@@ -427,3 +426,4 @@ task.spawn(function()
         fairySummoner()
     end
 end)
+
