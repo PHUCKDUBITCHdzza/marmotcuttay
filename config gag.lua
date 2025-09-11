@@ -107,11 +107,13 @@ getgenv().ConfigsKaitun = {
 
 	Events = {
 		["Fairy Event"] = {
-			Minimum_Money = 100_000, -- minimum money to start play this event
+			Minimum_Money = 10_000_000, -- minimum money to start play this event
 			Rewards_Item = { -- top mean select first
 				"Enchanted Egg",
 				"Enchanted Seed Pack",
 				"FairyPoints",
+				"Pet Shard Glimmering",
+			    "Fairy Targeter",
 			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
@@ -122,20 +124,19 @@ getgenv().ConfigsKaitun = {
 					"Fairy Event Duration",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 8, -- max 10
-					["Loose Fairy Spawn Amount"] = 8, -- max 10
-					["Fairy Event Duration"] = 8, -- max 10
-					["Fairy Spawn Amount"] = 8, -- max 9
+					["Glimmer Multiplier"] = 1, -- max 10
+					["Loose Fairy Spawn Amount"] = 10, -- max 10
+					["Fairy Event Duration"] = 10, -- max 10
+					["Fairy Spawn Amount"] = 9, -- max 9
 				}
-			},
-		Minimum_Fairy_Point_Restock = 5000, -- if fairy point more then this will restock
-        Catch_Fairy_Before_Restock = 51, -- fr it 50 but to be sure i put 51
+			}
 		},
-		MaxMoney_Restocks = 1_000_000_000_000,
+		MaxMoney_Restocks = 5_000_000_000_000,
 		Shop = { -- un comment to buy
 			"Enchanted Chest",
 			"Enchanted Egg",
 			"Enchanted Seed Pack",
+
 			"Sprout Seed Pack",
 			"Sprout Egg",
 			-- "Mandrake",
@@ -149,6 +150,7 @@ getgenv().ConfigsKaitun = {
 		Craft = {
 			"Enchanted Chest",
 			"Enchanted Egg",
+			"Fairy Net",
 			"Anti Bee Egg",
 			"Sprout Egg",
 		},
@@ -166,6 +168,7 @@ getgenv().ConfigsKaitun = {
 
 	Gear = {
 		Buy = { 
+			"Harvest Tool",
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Grandmaster Sprinkler",
@@ -597,6 +600,7 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
+
 
 
 
