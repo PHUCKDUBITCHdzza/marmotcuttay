@@ -112,8 +112,6 @@ getgenv().ConfigsKaitun = {
 				"Enchanted Egg",
 				"Enchanted Seed Pack",
 				"FairyPoints",
-				"Pet Shard Glimmering",
-			    "Fairy Targeter",
 			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
@@ -150,10 +148,6 @@ getgenv().ConfigsKaitun = {
 		},
 		Craft = {
 			"Enchanted Chest",
-			"Enchanted Egg",
-			"Fairy Summoner",
-            "Fairy Power Extender",
-            "Fairy Caller",
 			"Anti Bee Egg",
 			"Sprout Egg",
 		},
@@ -428,6 +422,7 @@ task.spawn(function()
         fairySummoner()
     end
 end)
+
 
 
 
