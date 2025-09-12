@@ -136,6 +136,9 @@ getgenv().ConfigsKaitun = {
 			"Enchanted Chest",
 			"Enchanted Egg",
 			"Enchanted Seed Pack",
+			"Drake",
+			"Wisp",
+			"Luminous Sprite",
 
 			"Sprout Seed Pack",
 			"Sprout Egg",
@@ -148,9 +151,9 @@ getgenv().ConfigsKaitun = {
 			"Skyroot Chest",
 		},
 		Craft = {
+			"Fairy Net",
 			"Enchanted Chest",
 			"Enchanted Egg",
-			"Fairy Net",
 			"Anti Bee Egg",
 			"Sprout Egg",
 		},
@@ -165,7 +168,7 @@ getgenv().ConfigsKaitun = {
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
-
+	
 	Gear = {
 		Buy = { 
 			"Harvest Tool",
@@ -600,7 +603,3 @@ task.spawn(function()
         print('💎 Đã mua Enchanted Chest x2!')
     end
 end)
-
-
-
-
