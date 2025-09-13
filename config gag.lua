@@ -335,6 +335,7 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
+				"Swan",
 				"Golden Goose",
 				"Phoenix",
 				"Cockatrice",
@@ -468,6 +469,7 @@ end
 while task.wait(INTERVAL) do
     harvestAndSubmit()
 end
+
 
 
 
