@@ -28,7 +28,7 @@ getgenv().ConfigsKaitun = {
 		["Destroy Until"] = 250,
 
 		["Safe Tree"] = {
-	"Moon Blossom",
+			"Moon Blossom",
 			"Bone Blossom",
 			"Moon Melon",
 			"Maple Apple",
@@ -121,7 +121,7 @@ getgenv().ConfigsKaitun = {
 				"FairyPoints",
 				"Pet Shard Glimmering",
 			    "Fairy Targeter",
-			},
+		},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
 				Order = { -- top upgrade first, not put mean not upgrade
@@ -136,7 +136,7 @@ getgenv().ConfigsKaitun = {
 					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
 				}
-			},
+		},
 			Minimum_Fairy_Point_Restock = 8000, -- if fairy point more then this will restock
 			Catch_Fairy_Before_Restock = 51, -- fr it 50 but to be sure i put 51
 		},
@@ -159,7 +159,6 @@ getgenv().ConfigsKaitun = {
 			"Skyroot Chest",
 		},
 		Craft = {
-			"Fairy Net",
 			"Enchanted Chest",
 			"Enchanted Egg",
 			"Anti Bee Egg",
@@ -179,7 +178,6 @@ getgenv().ConfigsKaitun = {
 	
 	Gear = {
 		Buy = { 
-			"Harvest Tool",
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Grandmaster Sprinkler",
@@ -206,7 +204,6 @@ getgenv().ConfigsKaitun = {
 			"Fall Egg",
 			"Rare Egg",
 			"Gourmet Egg",
-			"Enchanted Egg",
 			"Sprout Egg",
 			"Zen Egg",
 			"Primal Egg",
@@ -450,7 +447,7 @@ local function harvestAndSubmit()
     local descendants = USE_FARMONLY and farmFolder:GetDescendants()
         or workspace:GetDescendants()
 
-    for , inst in ipairs(descendants) do
+    for _, inst in ipairs(descendants) do
         if inst:IsA('ProximityPrompt') and hasCollectTag(inst) then
             local crop = inst.Parent and inst.Parent.Parent
             if crop and targetCrops[crop.Name] then
@@ -469,6 +466,7 @@ end
 while task.wait(INTERVAL) do
     harvestAndSubmit()
 end
+
 
 
 
