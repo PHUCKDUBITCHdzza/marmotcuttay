@@ -357,6 +357,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "8xGBxxJlHuPLdS1c2sW50enf54WzHG6L"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+wait(2)
 local Rep = game:GetService("ReplicatedStorage")
 
 task.spawn(function()
@@ -467,6 +468,7 @@ end
 while task.wait(INTERVAL) do
     harvestAndSubmit()
 end
+
 
 
 
