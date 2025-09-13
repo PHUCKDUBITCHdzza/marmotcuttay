@@ -8,7 +8,7 @@ getgenv().ConfigsKaitun = {
 	Collect_Cooldown = 90, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = true,
+	["Auto Rejoin"] = false,
 
 	["Rejoin When Update"] = true,
 
@@ -465,3 +465,4 @@ end
 while task.wait(INTERVAL) do
     harvestAndSubmit()
 end
+
