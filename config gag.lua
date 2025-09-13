@@ -250,7 +250,7 @@ getgenv().ConfigsKaitun = {
 				["Petal Bee"] = { 5, 100, 4 },
 				["Wasp"] = { 5, 100, 5 },
 				["Tarantula Hawk"] = { 5, 100, 6 },
-				["Glimmering Sprite"] = { 5, 100, 7 },
+				["Barn Owl"] = { 5, 100, 7 },
                 ["Sunny-Side Chicken"] = { 3, 100, 8 },
                 ["Starfish"] = { 5, 100, 9 },
             	["Brown Mouse"] = { 3, 100, 10 },
@@ -264,6 +264,9 @@ getgenv().ConfigsKaitun = {
 		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
+			["Barn Owl"] = 8,
+			"Swan",
+			["Space Squirrel"] = 3,
 			"Cockatrice",
 			"Drake",
 			"Wisp",
@@ -271,7 +274,6 @@ getgenv().ConfigsKaitun = {
 			"Wisp Well",
 			"Phoenix",
 			["Glimmering Sprite"] = 8,
-			["Imp"] = 3,
 			"Griffin",
 			["Brown Mouse"] = 2,
 			["Squirrel"] = 1,
@@ -357,4 +359,5 @@ task.spawn(function()
         print("🛒 Đã mua:", args[1])
     end
 end)
+
 
