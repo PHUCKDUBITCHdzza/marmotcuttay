@@ -195,6 +195,7 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Fall Egg",
 			"Gourmet Egg",
 			"Enchanted Egg",
 			"Sprout Egg",
@@ -209,6 +210,7 @@ getgenv().ConfigsKaitun = {
 			"Rare Summer Egg",
 		},
 		Buy = {
+			"Fall Egg",
 			"Bee Egg",
 			"Enchanted Egg",
 			"Oasis Egg",
@@ -355,3 +357,4 @@ task.spawn(function()
         print("🛒 Đã mua:", args[1])
     end
 end)
+
