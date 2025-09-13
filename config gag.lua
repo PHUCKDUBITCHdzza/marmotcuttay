@@ -259,12 +259,13 @@ getgenv().ConfigsKaitun = {
 				["Petal Bee"] = { 5, 100, 4 },
 				["Wasp"] = { 5, 100, 5 },
 				["Tarantula Hawk"] = { 5, 100, 6 },
-				["Barn Owl"] = { 5, 100, 7 },
-                ["Sunny-Side Chicken"] = { 3, 100, 8 },
-                ["Starfish"] = { 5, 100, 9 },
-            	["Brown Mouse"] = { 3, 100, 10 },
-                ["Grey Mouse"] = { 3, 100, 11 },
-                ["Rooster"] = { 4, 100, 12 },
+				["Swan"] = { 1, 100, 7 },
+				["Barn Owl"] = { 3, 100, 8 },
+                ["Sunny-Side Chicken"] = { 3, 100, 9 },
+                ["Starfish"] = { 5, 100, 10 },
+            	["Brown Mouse"] = { 3, 100, 11 },
+                ["Grey Mouse"] = { 3, 100, 12 },
+                ["Rooster"] = { 4, 100, 13 },
 				"Bear Bee",
 			 	"Petal Bee",
 			},
@@ -466,6 +467,7 @@ end
 while task.wait(INTERVAL) do
     harvestAndSubmit()
 end
+
 
 
 
