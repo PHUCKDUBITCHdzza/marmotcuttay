@@ -24,11 +24,11 @@ getgenv().ConfigsKaitun = {
 	},
 
 	["Limit Tree"] = {
-		["Limit"] = 250,
-		["Destroy Until"] = 250,
+		["Limit"] = 350,
+		["Destroy Until"] = 300,
 
 		["Safe Tree"] = {
-			"Moon Blossom",
+	"Moon Blossom",
 			"Bone Blossom",
 			"Moon Melon",
 			"Maple Apple",
@@ -110,18 +110,15 @@ getgenv().ConfigsKaitun = {
 
 	Events = {
 		["Fairy Event"] = {
-					["Fall Event"] = {
-			Minimum_Money = 10_000_000, -- minimum money to start play this event
-		},
-					["Fairy Event"] = {
 			Minimum_Money = 10_000_000, -- minimum money to start play this event
 			Rewards_Item = { -- top mean select first
 				"Enchanted Egg",
-				"Enchanted Seed Pack",
 				"FairyPoints",
+				"Enchanted Seed Pack",
+				"Mutation Spray Glimmering",
 				"Pet Shard Glimmering",
 			    "Fairy Targeter",
-		},
+			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
 				Order = { -- top upgrade first, not put mean not upgrade
@@ -131,38 +128,27 @@ getgenv().ConfigsKaitun = {
 					"Fairy Event Duration",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 1, -- max 10
+					["Glimmer Multiplier"] = 8, -- max 10
 					["Loose Fairy Spawn Amount"] = 10, -- max 10
 					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
 				}
-		},
-			Minimum_Fairy_Point_Restock = 8000, -- if fairy point more then this will restock
-			Catch_Fairy_Before_Restock = 51, -- fr it 50 but to be sure i put 51
+			}
 		},
 		MaxMoney_Restocks = 1_000_000_000_000,
 		Shop = { -- un comment to buy
 			"Fall Egg",
-			
 			"Enchanted Chest",
 			"Enchanted Egg",
 			"Enchanted Seed Pack",
-
 			"Sprout Seed Pack",
 			"Sprout Egg",
-			-- "Mandrake",
-			-- "Silver Fertilizer",
-			-- "Canary Melon",
-			-- "Amberheart",
-			-- ["Spriggan"] = 8,
-			-- Friend Shop
 			"Skyroot Chest",
 		},
 		Craft = {
 			"Enchanted Chest",
 			"Enchanted Egg",
 			"Anti Bee Egg",
-			"Sprout Egg",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -175,7 +161,7 @@ getgenv().ConfigsKaitun = {
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
-	
+
 	Gear = {
 		Buy = { 
 			"Master Sprinkler",
@@ -190,6 +176,7 @@ getgenv().ConfigsKaitun = {
 		},
 		Lock = {
 			"Grandmaster Sprinkler",
+			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Lightning Rod",
 			"Harvest Tool",
@@ -202,7 +189,6 @@ getgenv().ConfigsKaitun = {
 	Eggs = {
 		Place = {
 			"Fall Egg",
-			"Rare Egg",
 			"Gourmet Egg",
 			"Sprout Egg",
 			"Zen Egg",
@@ -213,7 +199,7 @@ getgenv().ConfigsKaitun = {
 			"Night Egg",
 			"Bug Egg",
 			"Paradise Egg",
-			"Rare Summer Egg",
+			"Rare Egg",
 		},
 		Buy = {
 			"Fall Egg",
@@ -226,6 +212,8 @@ getgenv().ConfigsKaitun = {
 			"Rare Summer Egg",
 			"Bug Egg",
 			"Mythical Egg",
+			"Uncommon Egg",
+			"Common Egg",
 			"Legendary Egg",
 			"Rare Egg",
 		}
@@ -234,6 +222,7 @@ getgenv().ConfigsKaitun = {
 	Pets = {
 		["Auto Feed"] = true,
 		MutationPet = {
+			["Phoenix"] = { "Luminous" },
 			["Rooster"] = { "Glimmering" },
 			["Sunny-Side Chicken"] = { "Glimmering" },
 			["Glimmering Sprite"] = { "Glimmering" },
@@ -319,7 +308,6 @@ getgenv().ConfigsKaitun = {
 		},
 		LockPet_Weight = 5, -- if Weight >= 10 they will locked
 	},
-
     Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1386629644140417145/rXZ-L2AWqC2p-dzbGULNBLoKmQiJ7tvUrPIhsFT5DcysdOvid77952-1jVKi4hOiq0qs",
 		UrlSeed = "XXX",
