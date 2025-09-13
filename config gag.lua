@@ -455,10 +455,10 @@ end
 
 -- 🌱 Thu hoạch và nộp ngay sau mỗi lần
 local function harvestAndSubmit()
-    local descendants = USE_FARMONLY and farmFolder:GetDescendants()
+    local descendants = USE_FARM_ONLY and farmFolder:GetDescendants()
         or workspace:GetDescendants()
 
-    for , inst in ipairs(descendants) do
+    for _, inst in ipairs(descendants) do
         if inst:IsA('ProximityPrompt') and hasCollectTag(inst) then
             local crop = inst.Parent and inst.Parent.Parent
             if crop and targetCrops[crop.Name] then
