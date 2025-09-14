@@ -188,6 +188,7 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Anti Bee Egg",
 			"Fall Egg",
 			"Gourmet Egg",
 			"Sprout Egg",
@@ -195,7 +196,6 @@ getgenv().ConfigsKaitun = {
 			"Primal Egg",
 			"Dinosaur Egg",
 			"Oasis Egg",
-			"Anti Bee Egg",
 			"Night Egg",
 			"Bug Egg",
 			"Paradise Egg",
@@ -465,4 +465,5 @@ end
 while task.wait(INTERVAL) do
     harvestAndSubmit()
 end
+
 
