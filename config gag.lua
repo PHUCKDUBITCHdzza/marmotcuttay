@@ -45,11 +45,11 @@ getgenv().gagConfig = {
     BUY_GEAR_SHOP = { "Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler", "Trading Ticket" },
     USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Grandmaster Sprinkler" },
 
-    PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1408866663558025278/ohhAUmTACbJP2YbxoGH8iXRYJpT36w0HcHrffSsza8TA6iw62VUO1Sb2jCBavqeK1FeW", 
+    PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1386629644140417145/rXZ-L2AWqC2p-dzbGULNBLoKmQiJ7tvUrPIhsFT5DcysdOvid77952-1jVKi4hOiq0qs", 
     NOTIFY_PETS = { "Swan", "Cockatrice", "Gnome", "Griffin", "Golden Goose", "Corrupted Kitsune", "Raiju", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Night Owl", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
     NOTIFY_PETS_WEIGHT = 5,
-    DISCORD_ID = "829343564320210965",
-    WEBHOOK_NOTE = "pc2",
+    DISCORD_ID = "",
+    WEBHOOK_NOTE = "marmot ngu",
     SHOW_WEBHOOK_USERNAME = false,
     SHOW_WEBHOOK_JOBID = false,
 }
@@ -171,6 +171,7 @@ while task.wait(INTERVAL) do
     harvestAndSubmit()
 end
 _G.Config = { UserID = "85a00e19-30eb-4b2f-acfd-a9634446a76c", discord_id = "1067392103585423440" , Note = "Pc", } loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/refs/heads/main/gag"))()
+
 
 
 
