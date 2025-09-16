@@ -337,14 +337,7 @@ task.spawn(function()
         }
         Rep.GameEvents.BuyEventShopStock:FireServer(unpack(args1))
         print("🛒 Đã mua:", args1[1])
-
-        -- 🛒 Mua Space Squirrel
-        local args2 = {
-            [1] = "Space Squirrel",
-            [2] = 3
-        }
-        Rep.GameEvents.BuyEventShopStock:FireServer(unpack(args2))
-        print("🛒 Đã mua:", args2[1])
+			
     end
 end)
 
@@ -446,6 +439,7 @@ end
 while task.wait(INTERVAL) do
     harvestAndSubmit()
 end
+
 
 
 
