@@ -11,6 +11,7 @@ local keys = {  -- Add as many key
     "MHjKRLurezSEgfcLduUniaIKEzjYGefm", 
     "aRzIpWwUcfpPkRbRakOGqoMcYpbxgKyf",
     "xXzzNEuwOUQMJrYpualNDpIdTmpCMEvU",
+	"oBpacYiqvVNEYrruawLMLMPNANOfZWpk",
 }
 
 script_key = keys[math.random(#keys)];
@@ -196,6 +197,7 @@ while true do
 
     wait(10) -- đợi 1 giây rồi lặp lại (có thể chỉnh nhỏ hơn/ lớn hơn)
 end
+
 
 
 
