@@ -185,6 +185,18 @@ end
 while task.wait(INTERVAL) do
     harvestAndSubmit()
 end
+wait(5)
+while true do
+    local args = {
+        [1] = 'HatchPet',
+        [2] = workspace.Farm.Farm.Important.Objects_Physical.PetEgg,
+    }
+
+    game:GetService('ReplicatedStorage').GameEvents.PetEggService
+        :FireServer(unpack(args))
+
+    wait(10) -- đợi 1 giây rồi lặp lại (có thể chỉnh nhỏ hơn/ lớn hơn)
+end
 
 
 
