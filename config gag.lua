@@ -78,13 +78,14 @@ task.spawn(function()
         print("🛒 Đã mua:", args1[1])
 
         -- Mua Mallard
-        local args2 = { "Mallard", 2 }
+        local args2 = { "Mallard", 3 }
         game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("BuyEventShopStock"):FireServer(unpack(args2))
         print("🛒 Đã mua:", args2[1])
 
         -- Mua Red Panda
-        local args3 = { "Red Panda", 2 }
+        local args3 = { "Red Panda", 3 }
         game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("BuyEventShopStock"):FireServer(unpack(args3))
         print("🛒 Đã mua:", args3[1])
     end
 end)
+
