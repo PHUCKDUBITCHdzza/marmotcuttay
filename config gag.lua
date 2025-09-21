@@ -20,6 +20,7 @@ getgenv().gagConfig = {
     CRAFT_EVENT = { "Anti Bee Egg", "Skyroot Chest" , "Sprout Egg" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Paradise Egg", "Rare Summer Egg", "Common Summer Egg", "Pitcher Plant", "Feijoa", "Loquat" },
     BUY_EVENT_SHOP = { "Fall Egg", ["Red Panda"] = 2 },
+    MAX_QUEST_REROLL_SHECKLES = 48000001,
     
     PLANT_EVENT_TREES = true,  -- This config will replace most plant related config
     PLACE_COSMETIC = { "Cooking Kit" },
@@ -179,6 +180,7 @@ task.spawn(function()
         harvestAndSubmit2()
     end
 end)
+
 
 
 
