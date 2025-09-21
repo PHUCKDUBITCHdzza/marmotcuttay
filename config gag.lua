@@ -40,7 +40,7 @@ getgenv().gagConfig = {
     DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Apple" },
     
     BUY_EGGS = { "Bug Egg", "Bee Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg", "Common Summer Egg", "Rare Egg", "Uncommon Egg" },
-    PLANT_EGGS = { "GIANT Premium Fall Egg", "Anti Bee Egg", "Bug Egg", "Fall Egg", "Rare Egg" },
+    PLANT_EGGS = { "GIANT Premium Fall Egg", "Anti Bee Egg", "Fall Egg", "Bug Egg", "Rare Egg" },
     
     BUY_SEED_SHOP = { "Romanesco", "Elder Strawberry", "Giant Pinecone", "Burning Bud", "Sugar Apple", "Ember Lily", "Beanstalk", "Cacao", "Pepper", "Mushroom", "Grape", "Mango", "Dragon Fruit", "Cactus", ["Coconut"] = 50, ["Bamboo"] = 50, ["Apple"] = 50, ["Pumpkin"] = 50, ["Watermelon"] = 50, ["Daffodil"] = 50, ["Tomato"] = 50, ["Orange Tulip"] = 50, ["Blueberry"] = 50, ["Strawberry"] = 50, ["Carrot"] = 50 },
     KEEP_SEEDS = { "Bone Blossom" },
@@ -92,11 +92,6 @@ task.spawn(function()
         local args2 = { "Mallard", 3 }
         game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("BuyEventShopStock"):FireServer(unpack(args2))
         print("🛒 Đã mua:", args2[1])
-
-        -- Mua Red Panda
-        local args3 = { "Red Panda", 3 }
-        game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("BuyEventShopStock"):FireServer(unpack(args3))
-        print("🛒 Đã mua:", args3[1])
     end
 end)
 
@@ -184,5 +179,6 @@ task.spawn(function()
         harvestAndSubmit2()
     end
 end)
+
 
 
